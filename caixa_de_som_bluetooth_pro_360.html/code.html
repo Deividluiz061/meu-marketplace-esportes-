@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caixa de Som Bluetooth Pro 360 - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .product-image-container {
+            aspect-ratio: 4/5;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-display-lg text-[24px] md:text-display-lg font-bold text-primary">Marketplace</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50 relative">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+</div>
+</header>
+
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+<!-- Breadcrumbs -->
+<nav class="mb-gutter flex items-center gap-2 text-on-surface-variant font-body-sm">
+<span>Início</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Eletrônicos</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Caixa de Som Bluetooth Pro 360</span>
+</nav>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+    <!-- Left: Image Gallery -->
+    <div class="lg:col-span-7 space-y-4">
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden product-image-container shadow-sm border border-outline-variant/20">
+            <img alt="Caixa de Som Bluetooth Pro 360 - visão frontal" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&h=1000&fit=crop"/>
+        </div>
+        <div class="grid grid-cols-4 gap-3">
+            <div class="aspect-square rounded-lg overflow-hidden border-2 border-primary cursor-pointer bg-white">
+                <img alt="Thumbnail 1 - Visão frontal" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=200&h=200&fit=crop"/>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/30 cursor-pointer bg-white">
+                <img alt="Thumbnail 2 - Visão lateral com controles" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=200&h=200&fit=crop"/>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/30 cursor-pointer bg-white">
+                <img alt="Thumbnail 3 - Parte traseira com entradas" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1589003077984-894e133ddfab?w=200&h=200&fit=crop"/>
+            </div>
+            <div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/30 cursor-pointer bg-surface-variant/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-3xl">play_circle</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right: Product Info -->
+    <div class="lg:col-span-5 space-y-5">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container/10 w-fit">
+            <span class="text-primary font-label-bold text-label-bold">🎵 Lançamento 2024</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Caixa de Som Bluetooth Pro 360</h1>
+
+        <!-- Rating -->
+        <div class="flex items-center gap-4">
+            <div class="flex items-center text-primary">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0.5;">star</span>
+            </div>
+            <span class="font-label-bold text-label-bold text-on-surface-variant">4.8 (156 avaliações)</span>
+        </div>
+
+        <!-- Price -->
+        <div class="border-t border-outline-variant/30 pt-4">
+            <div class="flex items-baseline gap-3 flex-wrap">
+                <span class="text-3xl font-bold text-primary">R$ 449,00</span>
+                <span class="text-on-surface-variant line-through text-sm">R$ 649,00</span>
+                <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full">31% OFF</span>
+            </div>
+            <p class="text-on-surface-variant text-sm mt-2">ou <span class="font-bold">R$ 399,00</span> à vista no PIX</p>
+            <p class="text-on-surface-variant text-sm">ou 4x de R$ 112,25 sem juros</p>
+            <p class="text-green-600 text-sm font-semibold mt-1">✓ Em estoque - Pronto para envio</p>
+        </div>
+
+        <!-- Frete -->
+        <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+            <span class="material-symbols-outlined text-primary">local_shipping</span>
+            <div>
+                <p class="font-label-bold text-label-bold">Frete Grátis</p>
+                <p class="text-body-sm text-on-surface-variant">Entregamos para todo o Brasil - 3 a 5 dias úteis</p>
+            </div>
+        </div>
+
+        <!-- Cor -->
+        <div class="flex flex-col gap-3">
+            <label class="font-label-bold text-label-bold text-on-surface">Cor</label>
+            <div class="flex gap-3">
+                <button class="w-10 h-10 rounded-full bg-[#1a1a1a] ring-2 ring-primary ring-offset-2 transition-transform active:scale-90 hover:scale-105"></button>
+                <button class="w-10 h-10 rounded-full bg-[#f5f5f5] border border-outline-variant/30 transition-transform active:scale-90 hover:scale-105"></button>
+                <button class="w-10 h-10 rounded-full bg-[#2563eb] border border-outline-variant/30 transition-transform active:scale-90 hover:scale-105"></button>
+                <button class="w-10 h-10 rounded-full bg-[#dc2626] border border-outline-variant/30 transition-transform active:scale-90 hover:scale-105"></button>
+            </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="flex flex-col gap-3">
+            <label class="font-label-bold text-label-bold text-on-surface">Quantidade</label>
+            <div class="flex items-center bg-surface-container rounded-full w-fit">
+                <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary transition-colors">-</button>
+                <span class="font-label-bold text-label-bold w-12 text-center">1</span>
+                <button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary transition-colors">+</button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col gap-3 pt-2">
+            <button class="w-full bg-primary text-on-primary font-label-bold py-4 rounded-xl shadow-md transition-all active:scale-95 hover:bg-surface-tint flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">bolt</span>
+                Comprar Agora
+            </button>
+            <button class="w-full bg-secondary-container text-on-secondary-container font-label-bold py-4 rounded-xl transition-all active:scale-95 hover:bg-secondary-container/80 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Adicionar ao Carrinho
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Detalhes Técnicos -->
+<section class="mt-stack-lg border-t border-outline-variant/30 pt-stack-lg">
+    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-gutter">Detalhes Técnicos</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Som 360 -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+            <h3 class="font-title-md text-title-md text-primary mb-3">🎵 Som 360° Imersivo</h3>
+            <p class="text-body-lg text-on-surface-variant leading-relaxed">
+                Experimente um áudio envolvente como nunca antes. A Caixa de Som Bluetooth Pro 360 conta com tecnologia de som omnidirecional que preenche todo o ambiente com graves profundos e agudos cristalinos. Com dois drivers de 10W e um radiador passivo, a potência total de 30W garante uma experiência sonora premium para festas, reuniões ou momentos de relaxamento.
+            </p>
+        </div>
+
+        <!-- Bateria -->
+        <div class="bg-primary text-on-primary p-6 rounded-xl">
+            <span class="material-symbols-outlined text-5xl mb-3">battery_5_bar</span>
+            <h3 class="font-title-md text-title-md mb-2">Bateria de Longa Duração</h3>
+            <p class="text-body-sm opacity-90">Até 24 horas de reprodução contínua com uma única carga. Carregamento rápido via USB-C em apenas 2 horas.</p>
+        </div>
+
+        <!-- Características Premium -->
+        <div class="bg-surface-container-high p-6 rounded-xl">
+            <h3 class="font-title-md text-title-md text-on-surface mb-3">✨ Características Premium</h3>
+            <ul class="space-y-2">
+                <li class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Bluetooth 5.3 com alcance de 30m
+                </li>
+                <li class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Resistência à água IPX7
+                </li>
+                <li class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Iluminação RGB sincronizada com a música
+                </li>
+                <li class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Microfone integrado para chamadas
+                </li>
+                <li class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span> Entrada P2 e cartão MicroSD
+                </li>
+            </ul>
+        </div>
+
+        <!-- Design Portátil -->
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col md:flex-row gap-4 items-center">
+            <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+                <img alt="Caixa de som com iluminação RGB" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=150&h=150&fit=crop"/>
+            </div>
+            <div>
+                <h3 class="font-title-md text-title-md text-on-surface mb-2">Design Portátil e Resistente</h3>
+                <p class="text-body-sm text-on-surface-variant">Com acabamento em tecido acrílico e borracha antichoque, a Pro 360 é perfeita para levar para qualquer lugar. Alça de transporte integrada e peso de apenas 850g.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Produtos Relacionados (TODOS são caixas de som) -->
+<section class="mt-stack-lg">
+    <div class="flex justify-between items-end mb-gutter">
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Produtos Relacionados</h2>
+        <a href="#" class="text-primary font-label-bold text-label-bold flex items-center gap-1 hover:underline">Ver tudo <span class="material-symbols-outlined text-[16px]">chevron_right</span></a>
+    </div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Card 1 - JBL Flip 6 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="aspect-square overflow-hidden bg-surface-container">
+                <img alt="Caixa de Som JBL Flip 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=300&fit=crop"/>
+            </div>
+            <div class="p-3">
+                <h4 class="font-label-bold text-label-bold line-clamp-2">JBL Flip 6 - Bluetooth</h4>
+                <p class="text-primary font-bold text-lg mt-1">R$ 599,00</p>
+                <button class="w-full mt-2 py-2 bg-secondary-container text-on-secondary-container rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2 - Sony SRS-XB13 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="aspect-square overflow-hidden bg-surface-container">
+                <img alt="Caixa de Som Sony SRS-XB13" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=300&h=300&fit=crop"/>
+            </div>
+            <div class="p-3">
+                <h4 class="font-label-bold text-label-bold line-clamp-2">Sony SRS-XB13 Extra Bass</h4>
+                <p class="text-primary font-bold text-lg mt-1">R$ 349,00</p>
+                <button class="w-full mt-2 py-2 bg-secondary-container text-on-secondary-container rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 3 - Anker Soundcore -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="aspect-square overflow-hidden bg-surface-container">
+                <img alt="Caixa de Som Anker Soundcore" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="data:image/jpeg;base64,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"/>
+            </div>
+            <div class="p-3">
+                <h4 class="font-label-bold text-label-bold line-clamp-2">Anker Soundcore Mini</h4>
+                <p class="text-primary font-bold text-lg mt-1">R$ 279,00</p>
+                <button class="w-full mt-2 py-2 bg-secondary-container text-on-secondary-container rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 4 - Ultimate Ears Boom 3 -->
+        <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="aspect-square overflow-hidden bg-surface-container">
+                <img alt="Caixa de Som Ultimate Ears Boom 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=300&h=300&fit=crop"/>
+            </div>
+            <div class="p-3">
+                <h4 class="font-label-bold text-label-bold line-clamp-2">Ultimate Ears Boom 3</h4>
+                <p class="text-primary font-bold text-lg mt-1">R$ 799,00</p>
+                <button class="w-full mt-2 py-2 bg-secondary-container text-on-secondary-container rounded-lg text-xs font-bold flex items-center justify-center gap-1 transition-all active:scale-95">
+                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span> Adicionar
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Segurança e Garantia -->
+<section class="mt-stack-lg">
+    <div class="bg-surface-container-low rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+            <div>
+                <p class="font-title-md text-title-md">Compra 100% Segura</p>
+                <p class="text-body-sm text-on-surface-variant">Seus dados estão protegidos com criptografia</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary text-4xl">autorenew</span>
+            <div>
+                <p class="font-title-md text-title-md">Garantia de 12 meses</p>
+                <p class="text-body-sm text-on-surface-variant">Contra defeitos de fabricação</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary text-4xl">support_agent</span>
+            <div>
+                <p class="font-title-md text-title-md">Suporte 24/7</p>
+                <p class="text-body-sm text-on-surface-variant">Atendimento via chat e WhatsApp</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] border-t border-outline-variant/30 z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px]">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-bold text-[10px]">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-bold text-[10px]">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-bold text-[10px]">Carrinho</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-[10px]">Perfil</span>
+</a>
+</nav>
+
+</body>
+</html>

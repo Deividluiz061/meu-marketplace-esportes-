@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moda - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen pb-24 md:pb-0 pt-16">
+
+<header class="bg-white shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-12 h-16">
+<div class="flex items-center gap-4">
+<a href="p_gina_inicial/code.html" class="hover:bg-gray-100 p-2 rounded-full">
+<span class="material-symbols-outlined text-blue-600">arrow_back</span>
+</a>
+<h1 class="text-2xl font-bold text-blue-600 hidden md:block">Marketplace</h1>
+</div>
+<div class="flex-1 max-w-xl mx-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">search</span>
+<input class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 border-none focus:ring-2 focus:ring-blue-600 outline-none text-sm" placeholder="O que você está procurando?" type="text"/>
+<button class="absolute right-1 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-4 py-1 rounded-full hover:bg-blue-700">Buscar</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a href="carrinho_de_compras/code.html" class="hover:bg-gray-100 p-2 rounded-full relative">
+<span class="material-symbols-outlined text-blue-600">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</a>
+</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-12 py-6">
+
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-6">
+<a href="p_gina_inicial/code.html" class="hover:text-blue-600">Início</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-blue-600 font-bold">Moda</span>
+</div>
+
+<div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 mb-8 text-white">
+<h1 class="text-3xl font-bold mb-2">👗 Moda Feminina e Masculina</h1>
+<p class="opacity-90">As melhores tendências da estação com até 40% OFF</p>
+</div>
+
+<div class="mb-6">
+<h2 class="text-2xl md:text-3xl font-bold">Categoria: <span class="text-blue-600">Moda</span></h2>
+<p class="text-gray-500 mt-1">Encontramos <span class="font-bold text-blue-600">8 produtos</span> para você</p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+<!-- Camiseta -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Camiseta Casual Slim</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(89)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 79,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Jaqueta Jeans (imagem corrigida) -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://doctjeans.cdn.magazord.com.br/img/2026/03/produto/5266/06-jaqueta-jeans-masculina-lav-doct.png?ims=fit-in/475x650/filters:fill(white)"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Jaqueta Jeans Premium</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(234)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 199,90</span>
+<span class="text-xs text-gray-400 line-through ml-2">R$ 299,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Vestido -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Vestido Floral Longo</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(156)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 149,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Calça Jeans -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Calça Jeans Skinny</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(178)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 129,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Bolsa -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Bolsa Feminina Couro</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(203)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 89,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Tênis Casual -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Tênis Casual Branco</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(312)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 199,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Óculos de Sol -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Óculos de Sol</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(156)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 149,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Relógio -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Moda</span>
+<h3 class="font-bold text-sm mt-1">Relógio Prata Premium</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(98)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 299,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+</div>
+
+<div class="flex justify-center gap-2 mt-8">
+<button class="px-3 py-2 bg-gray-100 rounded-lg text-gray-400 cursor-not-allowed" disabled>Anterior</button>
+<button class="px-4 py-2 bg-blue-600 text-white rounded-lg">1</button>
+<button class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">2</button>
+<button class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">3</button>
+<button class="px-3 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">Próximo</button>
+</div>
+
+</main>
+
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-2 px-4 flex justify-around z-50">
+<a href="p_gina_inicial/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">home</span><span class="text-[10px]">Início</span></a>
+<a href="resultados_da_busca/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">search</span><span class="text-[10px]">Busca</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">favorite</span><span class="text-[10px]">Favoritos</span></a>
+<a href="carrinho_de_compras/code.html" class="flex flex-col items-center relative"><span class="material-symbols-outlined">shopping_bag</span><span class="text-[10px]">Carrinho</span><span class="absolute -top-1 -right-2 bg-red-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">person</span><span class="text-[10px]">Perfil</span></a>
+</nav>
+
+</body>
+</html>

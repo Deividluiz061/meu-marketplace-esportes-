@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Casa - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen pb-24 md:pb-0 pt-16">
+
+<header class="bg-white shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-12 h-16">
+<div class="flex items-center gap-4">
+<a href="p_gina_inicial/code.html" class="hover:bg-gray-100 p-2 rounded-full">
+<span class="material-symbols-outlined text-blue-600">arrow_back</span>
+</a>
+<h1 class="text-2xl font-bold text-blue-600 hidden md:block">Marketplace</h1>
+</div>
+<div class="flex-1 max-w-xl mx-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">search</span>
+<input class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 border-none focus:ring-2 focus:ring-blue-600 outline-none text-sm" placeholder="O que você está procurando?" type="text"/>
+<button class="absolute right-1 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-4 py-1 rounded-full hover:bg-blue-700">Buscar</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a href="carrinho_de_compras/code.html" class="hover:bg-gray-100 p-2 rounded-full relative">
+<span class="material-symbols-outlined text-blue-600">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</a>
+</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-12 py-6">
+
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-6">
+<a href="p_gina_inicial/code.html" class="hover:text-blue-600">Início</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-blue-600 font-bold">Casa</span>
+</div>
+
+<div class="bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl p-8 mb-8 text-white">
+<h1 class="text-3xl font-bold mb-2">🏠 Decoração e Casa</h1>
+<p class="opacity-90">Deixe sua casa mais bonita com nossas ofertas</p>
+</div>
+
+<div class="mb-6">
+<h2 class="text-2xl md:text-3xl font-bold">Categoria: <span class="text-blue-600">Casa</span></h2>
+<p class="text-gray-500 mt-1">Encontramos <span class="font-bold text-blue-600">10 produtos</span> para você</p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Casa</span>
+<h3 class="font-bold text-sm mt-1">Sofá Retrátil 3 lugares</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(45)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 1.299,00</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQq5F7Z-hr4ehnt1W2rtjaqqJ-79s8xZO2_Ck9wFuHtMLNpXDtM44AUNfYfGlMxoq5X3kx3rZhS6L4C0kAcyMxK8TJOHAwd7IPZLRLHs7lf&usqp=CAc"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Casa</span>
+<h3 class="font-bold text-sm mt-1">Jogo de Panelas Antiaderente</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(89)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 299,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRuiOHGrOnRT5WGwoiptw11Jbosul83Z86zG362qjQtj8jX3p914CHLCP0addbJV4Dkg2zk8xdMARlzCALuYV2_vfDsiW6rHwVrJvKOKpWindZymDlrjmJHDGkLsdvqm8IIKGU1Gw&usqp=CAc"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Casa</span>
+<h3 class="font-bold text-sm mt-1">Luminária de Mesa LED</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(67)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 89,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="data:image/jpeg;base64,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"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Casa</span>
+<h3 class="font-bold text-sm mt-1">Tapete Decorativo</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(112)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 159,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+</div>
+</main>
+
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-2 px-4 flex justify-around z-50">
+<a href="p_gina_inicial/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">home</span><span class="text-[10px]">Início</span></a>
+<a href="resultados_da_busca/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">search</span><span class="text-[10px]">Busca</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">favorite</span><span class="text-[10px]">Favoritos</span></a>
+<a href="carrinho_de_compras/code.html" class="flex flex-col items-center relative"><span class="material-symbols-outlined">shopping_bag</span><span class="text-[10px]">Carrinho</span><span class="absolute -top-1 -right-2 bg-red-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">person</span><span class="text-[10px]">Perfil</span></a>
+</nav>
+
+</body>
+</html>

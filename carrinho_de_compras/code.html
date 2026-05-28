@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carrinho de Compras - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-display-lg text-[24px] md:text-display-lg font-bold text-primary">Marketplace</h1>
+</div>
+<div class="flex items-center gap-2">
+<a href="../checkout/code.html" class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50 relative">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-error text-on-error text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</a>
+</div>
+</header>
+
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+<!-- Items Section -->
+<section class="lg:col-span-8 space-y-gutter">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Meu Carrinho</h2>
+<span class="font-body-lg text-body-lg text-on-surface-variant">3 itens</span>
+</div>
+
+<!-- Product List -->
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group">
+<div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbvvTUcetbKKtEIr8j17a6eNqymzThtLHV_Wil6GzYe1Y2s2JJTgTTxBAACk94yDChHMLFuUfVN_8gQ4vMitGyRThiM75En95iHv10vjctGW2j7IGF2Dp1cWCY4GkNRkPesuaGwZK6XTYYIPJO-2wU6cG58Ur5dGIXm_rydBDZJ7U2Cx-3NG5u8tFPuEsr7Pq_BsK3C5bwkL7jUI-L28ZlsvvMMWKcvOlPPr9nzgzUNnkA13MuMaPJhzuyKWnXZBpuRe-J0S7N1sY"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Fone de Ouvido Noise Canceling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Preto Fosco | Bluetooth 5.2</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1 gap-4">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">-</button>
+<span class="font-label-bold text-label-bold">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">+</button>
+</div>
+<span class="font-price-display text-price-display text-primary">R$ 1.299,00</span>
+</div>
+</div>
+</div>
+
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group">
+<div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0CfLAMePGKv6XOshigCIefCpvFdVD7_GzUb_sx14NlladoqgLt5RUPOFt4Ae5l-Ql6QB6FY38fj7yk2D6PXpmm_xR_HRzBbQ_5PWKL_KP544dp8e_voAcfebPykwUPNt1JJOF6MgfycyOIzcBUEqNlhPNIO7atBRxEMPfieiYccUhQwdd0-a7n-lZkeLMy1nHs8UkR2y1ngFPAD-zATN29xjpVuA3ZASRpM_6PDJIXS0vukNgkJbLake14lFnemYYvybuyoe4-s"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Tênis Performance Ultra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vermelho | Tamanho 42</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1 gap-4">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">-</button>
+<span class="font-label-bold text-label-bold">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">+</button>
+</div>
+<span class="font-price-display text-price-display text-primary">R$ 549,90</span>
+</div>
+</div>
+</div>
+
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group">
+<div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC69xxp5bCW-z-rTU46UlQWhO_bVd7gn2tNVaxNeCqG3oc-Qnv-9CWa_-4o_tSvQoOEbEj6g3Ie8uFJOBeTWYxj78qKf4wkVDpctD8Tn3A3ivewCfex_KfKe5G2cOC8anFAIRyJOYqVVCGaOKM3NJ2BMfs7LSkZPRfvE1fZIm-HKMTD0hJvhupSFxuYdUPNYbSZrEYxNnQe_Ggvwv36GvgjAN7h9wzZNXxjP4w0rSKnzkW0FOZOA4YLNb85bhdLOiYpTZI_QEVTDRk"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Smartwatch Elite Series</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prata | Pulseira Branca</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1 gap-4">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">-</button>
+<span class="font-label-bold text-label-bold">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-variant rounded-full text-primary">+</button>
+</div>
+<span class="font-price-display text-price-display text-primary">R$ 899,00</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Continuar Comprando - link para página inicial -->
+<a href="../code.html" class="flex items-center gap-2 text-primary font-label-bold transition-all duration-200 hover:translate-x-[-4px]">
+<span class="material-symbols-outlined">arrow_back</span>
+Continuar Comprando
+</a>
+</section>
+
+<!-- Order Summary Section -->
+<aside class="lg:col-span-4">
+<div class="bg-surface-container-low rounded-xl p-6 shadow-lg sticky top-24 space-y-6">
+<h2 class="font-title-md text-title-md border-b border-outline-variant/30 pb-4">Resumo do Pedido</h2>
+<div class="space-y-4">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg text-body-lg">Subtotal</span>
+<span class="font-body-lg text-body-lg">R$ 2.747,90</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg text-body-lg">Frete</span>
+<span class="font-label-bold text-label-bold text-tertiary">Grátis</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg text-body-lg">Descontos</span>
+<span class="font-body-lg text-body-lg">- R$ 0,00</span>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-4 space-y-6">
+<div class="flex justify-between items-baseline">
+<span class="font-title-md text-title-md">Total</span>
+<span class="font-display-lg text-[28px] text-primary">R$ 2.747,90</span>
+</div>
+<div class="space-y-3">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 text-body-sm focus:outline-none focus:border-primary transition-all" placeholder="Cupom de desconto" type="text"/>
+<button class="absolute right-2 top-2 px-4 py-1.5 bg-secondary-container text-primary font-label-bold rounded-md hover:bg-secondary-container/80 transition-colors">Aplicar</button>
+</div>
+
+<!-- Finalizar Compra - link para o CHECKOUT -->
+<a href="../checkout/code.html" class="w-full bg-primary text-on-primary font-label-bold py-4 rounded-xl shadow-md transition-all duration-200 active:scale-95 hover:bg-surface-tint flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">lock</span>
+Finalizar Compra
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-surface rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold">Compra Segura</span>
+<span class="text-[12px] text-on-surface-variant">Seus dados estão protegidos</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold">Entrega Expressa</span>
+<span class="text-[12px] text-on-surface-variant">Receba em até 3 dias úteis</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] border-t border-outline-variant/30 z-50 rounded-t-xl">
+<a href="../code.html" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px]">Início</span>
+</a>
+<a href="../resultados_da_busca/code.html" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-bold text-[10px]">Busca</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-bold text-[10px]">Favoritos</span>
+</a>
+<a href="../checkout/code.html" class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-bold text-[10px]">Carrinho</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-[10px]">Perfil</span>
+</a>
+</nav>
+
+</body>
+</html>

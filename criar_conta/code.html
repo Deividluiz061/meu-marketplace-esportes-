@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cadastro - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dae2fd",
+                        "inverse-primary": "#b7c4ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#737688",
+                        "surface": "#f7f9fb",
+                        "primary": "#003ec7",
+                        "tertiary-container": "#006e95",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed": "#001452",
+                        "surface-bright": "#f7f9fb",
+                        "surface-tint": "#004ced",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-container": "#caeaff",
+                        "on-surface-variant": "#434656",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c3c5d9",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary-fixed": "#c4e7ff",
+                        "background": "#f7f9fb",
+                        "secondary": "#565e74",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001e2c",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "primary-container": "#0052ff",
+                        "tertiary": "#005474",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                        "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex items-center justify-center p-margin-mobile md:p-margin-desktop">
+<main class="w-full max-w-container-max flex flex-col md:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] min-h-[600px]">
+<!-- Left Side: Visual Content -->
+<div class="hidden md:flex md:w-1/2 relative bg-primary items-center justify-center p-stack-lg overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A professional and high-end lifestyle photography shot showcasing a modern retail environment with minimalist wooden shelves and premium electronic devices. The lighting is bright and airy, reflecting a clean light-mode aesthetic with soft blue and white highlights. The atmosphere is sophisticated and orderly, emphasizing a premium shopping experience with a focus on high-quality textures and professional staging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB08f13krdtZunBY7oiK6ikdFN-BYOj0OmxY90vvb9WWF2cbyc_S-PbqLJOvVCze2gWs6reRyuh5y6wuW7_vxyccLNbKPQojH2HEBNRddar9f0NWlYggrbw4g5B2qyEMb65joYKOKEBPA5BPeqb_yzJiYPNVDZKsi-0PvMV7MIkaw-dTLiduQqLNNSCE524bUmUnzGGYPOb89wez3BMVgVL5DepynsMXO5OQVzSaVc7FnPjZJYO8IMkKgo9rbGockAlMYDRbBSQXHM"/>
+</div>
+<div class="relative z-10 text-on-primary max-w-md">
+<h1 class="font-display-lg text-display-lg mb-stack-md">Junte-se à nossa comunidade.</h1>
+<p class="font-body-lg text-body-lg opacity-90">Crie sua conta agora e tenha acesso a ofertas exclusivas, lançamentos de eletrônicos e o melhor da moda em um só lugar.</p>
+<div class="mt-stack-lg flex gap-stack-sm">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="A close-up portrait of a professional woman smiling in a bright, corporate office setting. The lighting is soft and natural, emphasizing a trustworthy and friendly personality. The image follows a high-key aesthetic with a clean, blurred background consistent with a modern marketplace brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwE4qqcSr7Iz7S6AczPoOILUAF0Ti5t-I3vDbxxkNOIw-QwjoJKswh3VfJIh6EgYrDxJA3n_oMGCUmN63FIyjYbcGnTqvzOboNg0CLaCTZ7fItcemPOhAQWtrGDeogW1ng5SYlGPO7PDzMsaA796WFXUxhRbRcbNfz6T7w1RqAriAh4tS7gVxx0aSPz8Jdv9UKGnlQ4-YpF6xbWZY2gzR6aPCy8fvR0xXv3cZdMFXqgkGGK0t6BzXY3Lr2l5pc-ErVZ_qIRbvBFXU"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="A portrait of a confident businessman in professional attire, captured in a modern architectural setting with glass elements. The lighting is crisp and well-defined, creating a sense of reliability and expertise. The visual style is minimal and sophisticated, fitting a high-performance marketplace identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7d-FJWNNrPTL3IVKc1um5W6ERVbhO4rRrAYHso7vjDr42pEYWpl0mVczbkCr7KgYw4G7GtlneFjsIYI_0Km9ffjs2hX-3zmZuODo-4sA61KOh3KRaJyjttXAiFj25gT3V8zxonBZMVSluK7bNCKz6ojpXqPGIPDPzELdTogVogd4f5cb47nSSvi4pGlWnMaT_-jF7Sec8963NQz4XLq8u1mjlep29XnogF2vbyr5qhf0zSKBtxnZVYUOP_PydA06tvbzb7n3qTV8"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="A profile photo of a young entrepreneur in a bright, modern studio. The soft, even lighting highlights the person's friendly expression, set against a neutral, high-key background. The composition is clean and minimalist, reinforcing a sense of community and trust within a premium digital platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi6OyrmP4s-zKsKW-mSQFTGy7yw8q7hc-kwXssAkTh4eEmprAC1HXir8ij14surBFYdSGzPLPvWdZZMBkz60bl9b1dJXhQl2pa1EQYDMInTurXNe7Ek39kubXGeeYMDlf6MfmavnmNIhuZzxHPCNcwPAzIEscm-HOvq9E5MpAsuv9zOhtzoYkEDe693q__-bHXpb-Fvdrbj1xqkIzTM3FVH67GLKwrHi6uHOhmeAoDFPmnyW9OcNZgDQGxUqCOx6HoY7_eReN1NWw"/>
+</div>
+<p class="font-label-bold text-label-bold self-center">+5.000 usuários ativos</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Registration Form -->
+<div class="w-full md:w-1/2 p-stack-md md:p-stack-lg flex flex-col justify-center">
+<div class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-display-lg text-title-md font-bold text-primary">Marketplace</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Criar nova conta</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Preencha os campos abaixo para começar sua jornada.</p>
+</div>
+<form action="#" class="flex flex-col gap-base">
+<!-- Name Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-1" for="name">Nome completo</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="person">person</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-lg text-body-lg placeholder:text-outline-variant" id="name" placeholder="Ex: João Silva" required="" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-1" for="email">E-mail</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="mail">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-lg text-body-lg placeholder:text-outline-variant" id="email" placeholder="nome@exemplo.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-1" for="password">Senha</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-lg text-body-lg placeholder:text-outline-variant" id="password" placeholder="Mínimo 8 caracteres" required="" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password Field -->
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant px-1" for="confirm-password">Confirmar Senha</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="lock_reset">lock_reset</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-lg text-body-lg placeholder:text-outline-variant" id="confirm-password" placeholder="Repita sua senha" required="" type="password"/>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-3 mt-stack-sm px-1">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary" id="terms" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="terms">
+                        Ao se cadastrar, você concorda com nossos <a class="text-primary font-bold hover:underline" href="#">Termos de Serviço</a> e <a class="text-primary font-bold hover:underline" href="#">Política de Privacidade</a>.
+                    </label>
+</div>
+<!-- Action Button -->
+<button class="mt-stack-md w-full bg-primary text-on-primary py-4 rounded-xl font-label-bold text-label-bold transition-all hover:bg-primary/90 active:scale-[0.98] shadow-sm" type="submit">
+                    Criar minha conta
+                </button>
+<!-- Social Register -->
+<div class="relative my-stack-md text-center">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-outline-variant/30"></div></div>
+<span class="relative px-4 bg-surface-container-lowest font-label-bold text-body-sm text-on-surface-variant">ou cadastre-se com</span>
+</div>
+<div class="grid grid-cols-2 gap-stack-sm">
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-lg font-label-bold text-label-bold text-on-surface hover:bg-surface-variant/30 transition-colors" type="button">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLh4lpqmis2aGFEWtRLLMWSw25Ees94dgHPvAE-00K1TFTABvR43G1TrH8X5UKUdgpUCCNKEPjKQjRXa1FnYnOeSknl8MOnZFI61fgrsLY9EwYu-f0VQQDnPBwlxjaBGpNHA-7K--YQDRWEyWGtnPHb4MLPFy1WUkgwRdyuPLRCV-26a_37HDBmWNwQBWuiuSaJXmT_ilc6me8BRmnOStXrGGct3fOYEb5-qOWricALMr28MzMRUPn3P8bCTwIVRbNtFdHRey9fyQ"/>
+                        Google
+                    </button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-outline-variant rounded-lg font-label-bold text-label-bold text-on-surface hover:bg-surface-variant/30 transition-colors" type="button">
+<span class="material-symbols-outlined text-blue-600" data-icon="facebook">social_leaderboard</span>
+                        Facebook
+                    </button>
+</div>
+<!-- Footer Link -->
+<p class="mt-stack-lg text-center font-body-lg text-body-lg text-on-surface-variant">
+                    Já tem uma conta? 
+                    <a class="text-primary font-bold hover:underline" href="#">Entrar agora</a>
+</p>
+</form>
+</div>
+</main>
+</body></html>

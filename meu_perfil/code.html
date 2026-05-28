@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil do Usuário - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dae2fd",
+                        "inverse-primary": "#b7c4ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#737688",
+                        "surface": "#f7f9fb",
+                        "primary": "#003ec7",
+                        "tertiary-container": "#006e95",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed": "#001452",
+                        "surface-bright": "#f7f9fb",
+                        "surface-tint": "#004ced",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-container": "#caeaff",
+                        "on-surface-variant": "#434656",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c3c5d9",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary-fixed": "#c4e7ff",
+                        "background": "#f7f9fb",
+                        "secondary": "#565e74",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001e2c",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "primary-container": "#0052ff",
+                        "tertiary": "#005474",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                        "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-display-lg font-bold text-primary text-[24px] md:text-display-lg leading-none">Marketplace</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="transition-all duration-200 active:scale-95 p-2 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Profile Header Section -->
+<section class="flex flex-col md:flex-row items-center gap-gutter mb-stack-lg animate-in">
+<div class="relative group">
+<img alt="Foto de perfil" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-surface-container-lowest" data-alt="A high-quality professional studio portrait of a friendly young adult male with a neat haircut, set against a soft, bright white background. The lighting is clean and balanced, characteristic of a high-end corporate profile. The overall aesthetic is minimalist and modern, emphasizing reliability and a professional persona through subtle warm tones and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFOH2hH-eo_W7OhS8HQ7aLyS5AjCiAwPoBHYMY2vWij0PM909iS-7nn_v5GWKMr1qvSeejaCJbEbN_Ghjmmk3cF6WU77W-FwkXYJ6WCT53soQ1AS3MxYPBB5QTOgBnGqf5yiuuTXUoG7Vz5nqO-lZaGfIBKwQsasNj2Vr16RjN2noaBprnsJjcdiR8RimKqD1AnogzHegP-QJiDrUEffKpe7bRmtXmBJk8TdW1mEsZi2gNzYhkNDo7S4IOpL3yQaABF0pDRdu-IqU"/>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary p-2 rounded-full shadow-md transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-center md:text-left flex-1">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Olá, Usuário Exemplar</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">membro desde Janeiro de 2023 • Cliente Premium</p>
+<div class="mt-4 flex flex-wrap justify-center md:justify-start gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-bold text-label-bold">Nível 5</span>
+<span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-label-bold text-label-bold">Frete Grátis Ativo</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-bold text-label-bold transition-all duration-200 active:scale-95 shadow-md">
+                    Editar Perfil
+                </button>
+</div>
+</section>
+<!-- Bento Grid Layout for Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Information Column -->
+<div class="md:col-span-8 flex flex-col gap-gutter">
+<!-- Personal Info Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-title-md text-title-md text-primary">Informações Pessoais</h3>
+<span class="material-symbols-outlined text-outline" data-icon="info">info</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="space-y-1">
+<p class="font-label-bold text-label-bold text-on-surface-variant">Nome Completo</p>
+<p class="font-body-lg text-body-lg">Usuário da Silva Exemplar</p>
+</div>
+<div class="space-y-1">
+<p class="font-label-bold text-label-bold text-on-surface-variant">E-mail</p>
+<p class="font-body-lg text-body-lg">usuario.exemplo@email.com</p>
+</div>
+<div class="space-y-1">
+<p class="font-label-bold text-label-bold text-on-surface-variant">Telefone</p>
+<p class="font-body-lg text-body-lg">(11) 98765-4321</p>
+</div>
+<div class="space-y-1">
+<p class="font-label-bold text-label-bold text-on-surface-variant">CPF</p>
+<p class="font-body-lg text-body-lg">***.456.***-00</p>
+</div>
+</div>
+</div>
+<!-- Recent Orders -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-title-md text-title-md text-primary">Últimos Pedidos</h3>
+<a class="text-primary font-label-bold text-label-bold hover:underline" href="#">Ver todos</a>
+</div>
+<div class="space-y-4">
+<!-- Order Item 1 -->
+<div class="flex items-center gap-4 p-4 rounded-lg border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-200">
+<div class="w-16 h-16 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Produto" class="w-full h-full object-cover" data-alt="A vibrant red athletic sneaker positioned diagonally against a clean, neutral gray background. The lighting is soft and diffuse, highlighting the texture of the fabric and the sleek design of the sole. The style is professional commercial photography, emphasizing the product's premium build and modern aesthetic within a minimalist frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABchPSCZ6zcbviEij6ChkXy-og563aZyQTs01_gJQKLpHsDM_5_N276yvgm8NJG1QOXc2dDc11IUrP5K50F50wyvt4Yi-w_Ow-apjG1hl7OsX8bE8ft-2knqdYrZ4NB4qd4EJ_nNxz193euxx4tyDAytC55QX7LkSFVGQo0ajo3KS7B248y2BDqcOH1hrPudXRIgKHaZ1-H6a5xDBXMF9QfIS98zb2tbcfix42fMntLCDmOhmjl1eBJIpePeEblJKTVQTbD-eZ8Hg"/>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">Tênis Speed Pro Max</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pedido #98342 • 12 Out 2023</p>
+</div>
+<div class="text-right">
+<p class="font-price-display text-[16px] text-primary">R$ 499,90</p>
+<span class="bg-tertiary-container/20 text-tertiary font-label-bold text-[12px] px-2 py-0.5 rounded-full">Entregue</span>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="flex items-center gap-4 p-4 rounded-lg border border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-200">
+<div class="w-16 h-16 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Produto" class="w-full h-full object-cover" data-alt="A minimalist white smartwatch with a clean circular face and a silicone strap, displayed on a pristine white marble surface. The lighting is soft and high-key, creating a bright and airy atmosphere. The composition is professional and clean, capturing the sleek, technological essence of the device in a modern, luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA0jlXl06Rp8bhRo-_tY5Rt0-Ndzq09Fqny638InlwRrwtiJGkXcJ1TJlM4ZkWQs_Rrcfrpid7vYoSYLLnON7SJVAwuNHDoxgfGsUFJbVLPqDveMfnGyQ7EfyDB9AdVScwsM7fmChgsg8e07QNSRi2S6VTRtjUIZyoQGsl1Aixprjqpn2YEtxmYPPeJcD9FMqllLQ92r8E-Zm4vnHoywVAHqCN4jiKJbvdL9qacifHcgqzZ-obU-IIPhK7SsluOzLIbeLRKsrw8TM"/>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">Smartwatch Series X</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pedido #98211 • 05 Out 2023</p>
+</div>
+<div class="text-right">
+<p class="font-price-display text-[16px] text-primary">R$ 899,00</p>
+<span class="bg-secondary-container text-on-secondary-container font-label-bold text-[12px] px-2 py-0.5 rounded-full">Em Trânsito</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Settings/Addresses Column -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Saved Addresses -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-title-md text-title-md text-primary">Endereços</h3>
+<button class="text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="add_location">add_location</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-surface border border-primary/20 relative">
+<span class="absolute top-2 right-2 material-symbols-outlined text-primary text-[16px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-label-bold text-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="home">home</span>
+                                Casa
+                            </p>
+<p class="font-body-sm text-body-sm mt-1 text-on-surface-variant">Rua das Flores, 123 • Centro<br/>São Paulo - SP • 01234-567</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low border border-transparent hover:border-outline-variant transition-all">
+<p class="font-label-bold text-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="work">work</span>
+                                Trabalho
+                            </p>
+<p class="font-body-sm text-body-sm mt-1 text-on-surface-variant">Av. Paulista, 999 • Bela Vista<br/>São Paulo - SP • 01311-000</p>
+</div>
+</div>
+</div>
+<!-- Account Settings Menu -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<h3 class="font-title-md text-title-md text-primary mb-4">Configurações</h3>
+<nav class="flex flex-col gap-1">
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-surface-variant/30 transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="security">security</span>
+<span class="font-body-lg text-body-lg">Segurança e Senha</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-surface-variant/30 transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="notifications">notifications</span>
+<span class="font-body-lg text-body-lg">Notificações</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-surface-variant/30 transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="credit_card">credit_card</span>
+<span class="font-body-lg text-body-lg">Cartões Salvos</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-surface-variant/30 transition-colors group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="help">help</span>
+<span class="font-body-lg text-body-lg">Central de Ajuda</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+<hr class="my-2 border-outline-variant/30"/>
+<button class="flex items-center gap-3 w-full p-3 rounded-lg hover:bg-error-container/10 transition-colors group text-error">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-bold text-label-bold">Sair da Conta</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Component -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] border-t border-outline-variant/30 z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold text-[10px]">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-label-bold text-[10px]">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-bold text-label-bold text-[10px]">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-label-bold text-[10px]">Carrinho</span>
+</a>
+<!-- Perfil Active State -->
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold text-[10px]">Perfil</span>
+</a>
+</nav>
+</body></html>

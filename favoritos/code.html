@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meus Favoritos | Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dae2fd",
+                        "inverse-primary": "#b7c4ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#737688",
+                        "surface": "#f7f9fb",
+                        "primary": "#003ec7",
+                        "tertiary-container": "#006e95",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed": "#001452",
+                        "surface-bright": "#f7f9fb",
+                        "surface-tint": "#004ced",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary-container": "#caeaff",
+                        "on-surface-variant": "#434656",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c3c5d9",
+                        "on-background": "#191c1e",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary-fixed": "#c4e7ff",
+                        "background": "#f7f9fb",
+                        "secondary": "#565e74",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001e2c",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "primary-container": "#0052ff",
+                        "tertiary": "#005474",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "stack-md": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "stack-lg": "48px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                        "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 p-2 hover:bg-surface-variant/50 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-display-lg font-bold text-primary text-[24px] md:text-display-lg leading-tight">Marketplace</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="transition-all duration-200 active:scale-95 p-2 hover:bg-surface-variant/50 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Meus Favoritos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Você salvou 6 itens que amou.</p>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-bold text-label-bold cursor-pointer hover:underline">
+<span>Limpar todos os favoritos</span>
+<span class="material-symbols-outlined" data-icon="delete_sweep">delete_sweep</span>
+</div>
+</section>
+<!-- Product Grid (Asymmetric/Bento style mix) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A premium pair of high-fidelity wireless headphones in a matte navy blue finish, displayed on a clean white marble surface. The lighting is professional studio quality with soft highlights that accentuate the sleek curves and metallic accents. The overall aesthetic is professional, modern, and minimalist, emphasizing luxury electronics. The background is a soft, out-of-focus neutral grey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMfdUrhcCOJJ6JLij7SUyOwsN7Cba96IG94_DuSuzYNgRt4WXmp4WTOIGXgGIcAbHoOVP5i4D_qZM8Jz6fSurRp3CXeMM0Eyj8uLl-x6ufkIj_Korh1gORl5L_uY-4buhCBiDKg0Hyg8Qph_J-tQmTT1nkO4SPUsb8aHyIA21ZFgXC2HjbaRyVvf1uZwZba05tKv5qGJdpdf9dDNSlOA5Z7Z1rG9OLyXiEWS_u2uEwoNPqb-6ZaHtTFl_T5oFY-YbAnUTBb9bdabA"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Eletrônicos</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Fone de Ouvido Wireless Premium Noise Cancelling</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 1.299,00</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A stylish, minimalist leather handbag in a deep cobalt blue, positioned elegantly on a minimalist white pedestal. The lighting is crisp and bright, characteristic of a high-end fashion catalog. The scene conveys a sense of reliability and effortless discovery, with clean shadows and a sophisticated atmosphere. Pure white background creates a premium pop effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9bc1jYkXpOakI0NNqTeZCVJ4mzvkfVnKRgBYziA2CD_jydmqlxfRvUE1V0Nuw-Ql9DNH6PmYjOCT26rhNfNrteq4VPmrOK4CPGnVl9VNFnD0bcuD-DVBX8PLRlBu1WrABv4LisniyEXNpdi0iwIMFmOYfwaorT0Fle6MqB6dX1CyZ738i7B11b90Hxq5i9iBAWqHPBBCAOGEElh948a9bGkQHKGqdSh0zbQhUv4uqwTK7l7OAcRfsQn5pxvJ6p-vTuH1e3h3MLuw"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Moda</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Bolsa Transversal Couro Legítimo Azul Royal</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 459,90</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_bag">shopping_bag</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern, sleek smartwatch with a vibrant circular display showing a fitness tracking interface. The watch has a light grey silicone strap and is photographed in a high-tech, bright setting with soft blue neon accents in the background. The lighting is high-key and clean, emphasizing the clarity of the screen and the professional design of the device." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIOWZN7C6wGMJ3kTLQLQKt5kSRtAddx_ucF_v5magc1oCRTueIoQvljQHPqt92aP2Owp9LvVmPEcms2C2JX_DTv7EPJ7gXAh-0KWYTLNDe3tR8TyoQw5tVrfgof1rgkSxvR8cYke5kisk7MNUZCHp7efqULXFyDFHUITD-D6aE_kGFIEPV3GVntctJz13A569PeoI2KOOstlWLHZBBOlquXzaBER24ZEPoVFlmsb-GJwgNBzX1XWiVwSdtHjG10vr9AF_mk98DgmA"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Eletrônicos</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Smartwatch Series 7 Pro Geração 2</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 2.499,00</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_circle">add_circle</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A pair of clean, minimalist white sneakers with subtle blue stitching details, arranged artistically on a light wood floor. The room is flooded with natural morning light, creating soft, long shadows. The style is fresh, urban, and modern, targeting a professional audience looking for premium yet accessible fashion staples. High-key lighting highlights the texture of the material." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9cwkZc7-DKM-EWKpYSJufdf9x-ntEybGpkVj30OLYlloXqoLXjeGvE2IVmnJXkRoYArEgO__sk6gxEf3lPUphPAP_kIEaRN7tKlEvX-EMeWgh_-z4dqmlpF1RkpOrDONiNNN0YIdwsaAu65AZsvpwdEY2FBQUxe7W8JAjF8ugJxnERYpqUGiF6bdc89avjE4oNCfo9Cq2bTZXjLi3yYkQeZZ4EE_pHIH06MTmlFgBB3Fu7IHd6M8Kz09i7lcl1RP7pFXp1w96V6U"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Moda</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Tênis Casual Urban Confort White/Blue</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 389,00</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional mirrorless camera sitting on a tripod in a bright, modern studio. The camera body is sleek black with high-end glass lens attached. The environment is clean and professional, with soft boxes providing even illumination across the scene. The mood is precise and reliable, emphasizing high performance and effortless discovery for creators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfgn9pNCJNjSs4xjY3fHXH56WaK5AtZBnMq5SgHKXlbMUJClOEa8RkskPZf6JfArLNDHhwVe21eI4w0xAWMsoY70MzfGO88fGP6FeGKtep0Xy47F0WvjXJErHpdh7DXfRy2uUS3jF3n024Xs8pkKhSWyBjeU_DKsGEOoYWB4uYbIicz_z3FuXhuBk9FXETFP4xyOdA78arOYnqVrcETRlQpiGrmBFVI1RmYdMIPTYa7xMZTbq5xfLyFIdey4xUPpBnUEwPqle1bts"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Eletrônicos</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Câmera Mirrorless 4K Pro Creator Edition</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 5.790,00</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-200 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] group relative flex flex-col">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A slim, elegant navy blue sunglasses case and a pair of designer aviator sunglasses resting on a high-gloss white surface. The lighting is sharp, creating dramatic but clean reflections that highlight the premium build quality. The palette is dominated by whites and deep blues, aligning with a corporate modern aesthetic that is trustworthy and streamlined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL-T6pe-CzwDx-DT2ydkhqvNUz6l5Tr3ZOP6axryR5G5OWjmNb4fa9r_NwYG0fqIzW1E4cAaqDvO6T0DAHLHXhmtYJNj_IoQBHXBBu9BOo-lRnGn-1L9U323gqTrS2yei3824Xs19eSkidxwdQUT-iEur3rzKCi4VKlVhjzU-3knemLAiTy7u9K8qVYNUeKRDxEdjFdjFBgvOveTKIhq2E_tNQSldMEEkozEyZ1ESJ9Ef4xaYT_0y5LNBPMDRzn09JehWJ_3XlJZ0"/>
+<button class="absolute top-3 right-3 bg-white/90 p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Acessórios</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Óculos de Sol Aviador com Lentes Polarizadas</h3>
+<div class="mt-auto">
+<div class="font-price-display text-price-display text-primary mb-3">R$ 299,00</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                            Adicionar
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Visible on Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] border-t border-outline-variant/30 z-50">
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-label-bold">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-bold text-label-bold">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-label-bold">Carrinho</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold">Perfil</span>
+</a>
+</nav>
+<!-- Desktop Menu (NavigationDrawer replacement for top bar desktop context) -->
+<div class="hidden md:flex fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface shadow-lg border-r border-outline-variant/30 flex-col p-gutter gap-base">
+<div class="flex items-center gap-3 mb-6 p-2 rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-[14px]">Olá, Usuário</p>
+<p class="text-[12px] text-on-surface-variant">Ver minha conta</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="devices">devices</span>
+<span class="font-body-lg text-body-lg">Eletrônicos</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="checkroom">checkroom</span>
+<span class="font-body-lg text-body-lg">Moda</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="sell">sell</span>
+<span class="font-body-lg text-body-lg">Promoções</span>
+</a>
+<hr class="my-4 border-outline-variant/30"/>
+<a class="flex items-center gap-3 p-3 rounded-lg bg-primary-container text-on-primary-container font-bold transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-body-lg text-body-lg">Favoritos</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-body-lg text-body-lg">Meus Pedidos</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-colors duration-200 mt-auto" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-lg text-body-lg">Configurações</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Esportes - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen pb-24 md:pb-0 pt-16">
+
+<header class="bg-white shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-12 h-16">
+<div class="flex items-center gap-4">
+<a href="p_gina_inicial/code.html" class="hover:bg-gray-100 p-2 rounded-full">
+<span class="material-symbols-outlined text-blue-600">arrow_back</span>
+</a>
+<h1 class="text-2xl font-bold text-blue-600 hidden md:block">Marketplace</h1>
+</div>
+<div class="flex-1 max-w-xl mx-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">search</span>
+<input class="w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 border-none focus:ring-2 focus:ring-blue-600 outline-none text-sm" placeholder="O que você está procurando?" type="text"/>
+<button class="absolute right-1 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-4 py-1 rounded-full hover:bg-blue-700">Buscar</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a href="carrinho_de_compras/code.html" class="hover:bg-gray-100 p-2 rounded-full relative">
+<span class="material-symbols-outlined text-blue-600">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</a>
+</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-12 py-6">
+
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-6">
+<a href="p_gina_inicial/code.html" class="hover:text-blue-600">Início</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-blue-600 font-bold">Esportes</span>
+</div>
+
+<div class="bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl p-8 mb-8 text-white">
+<h1 class="text-3xl font-bold mb-2">⚽ Esportes e Fitness</h1>
+<p class="opacity-90">Equipamentos esportivos com qualidade e durabilidade</p>
+</div>
+
+<div class="mb-6">
+<h2 class="text-2xl md:text-3xl font-bold">Categoria: <span class="text-blue-600">Esportes</span></h2>
+<p class="text-gray-500 mt-1">Encontramos <span class="font-bold text-blue-600">8 produtos</span> para você</p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+<!-- Tênis de Corrida -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Tênis de Corrida Air Max</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(567)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 399,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Camisa Treino -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Camisa Treino Dry Fit</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(234)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 79,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Bola de Futebol -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Bola de Futebol Oficial</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(189)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 89,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Mochila Academia -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Mochila para Academia</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(112)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 129,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Short Esportivo -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="data:image/jpeg;base64,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"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Short Esportivo</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(203)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 59,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Corda de Pular -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRf_Cn60b2Tu2Fszv1d1i85y81NHSiBPJwG84-NsnbSKme3iZqqI7dJfMrLjdbyreOnAhz1cuxK_ABdaxtsEWIoiCbdFKB8n4fr8HTxCQkgU_pr-qEKG8o-"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Corda de Pular Profissional</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(78)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 29,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Luva de Boxe -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQOwWm1NGDzGrhPIXJk91bzsiniF8DMwVRKzLiSVZrzhe-FFM1lJFJKJAwSitgTGJM7_sgWt-FBqT1N4u_tDm9roMWt18quu7YKRja-YoRvsUNxCDy5WoLrXw"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Luva de Boxe</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★★</span>
+<span class="text-xs text-gray-500">(45)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 149,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+
+<!-- Garrafa Térmica -->
+<div class="bg-white rounded-xl shadow hover:shadow-md transition-all overflow-hidden">
+<div class="aspect-square bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300&h=300&fit=crop"/>
+</div>
+<div class="p-3">
+<span class="text-xs text-gray-500 uppercase font-bold">Esportes</span>
+<h3 class="font-bold text-sm mt-1">Garrafa Térmica 1L</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-yellow-500 text-sm">★★★★☆</span>
+<span class="text-xs text-gray-500">(312)</span>
+</div>
+<div class="mt-2">
+<span class="text-lg font-bold text-blue-600">R$ 49,90</span>
+</div>
+<button class="w-full mt-2 bg-blue-600 text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700" onclick="window.location.href='carrinho_de_compras/code.html'">Adicionar</button>
+</div>
+</div>
+</div>
+
+<div class="flex justify-center gap-2 mt-8">
+<button class="px-3 py-2 bg-gray-100 rounded-lg text-gray-400 cursor-not-allowed" disabled>Anterior</button>
+<button class="px-4 py-2 bg-blue-600 text-white rounded-lg">1</button>
+<button class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">2</button>
+<button class="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">3</button>
+<button class="px-3 py-2 bg-gray-100 rounded-lg hover:bg-gray-200">Próximo</button>
+</div>
+
+</main>
+
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-2 px-4 flex justify-around z-50">
+<a href="p_gina_inicial/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">home</span><span class="text-[10px]">Início</span></a>
+<a href="resultados_da_busca/code.html" class="flex flex-col items-center"><span class="material-symbols-outlined">search</span><span class="text-[10px]">Busca</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">favorite</span><span class="text-[10px]">Favoritos</span></a>
+<a href="carrinho_de_compras/code.html" class="flex flex-col items-center relative"><span class="material-symbols-outlined">shopping_bag</span><span class="text-[10px]">Carrinho</span><span class="absolute -top-1 -right-2 bg-red-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span></a>
+<a href="#" class="flex flex-col items-center"><span class="material-symbols-outlined">person</span><span class="text-[10px]">Perfil</span></a>
+</nav>
+
+</body>
+</html>

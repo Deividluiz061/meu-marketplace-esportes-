@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalhes do Produto | Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product-image-container {
+            aspect-ratio: 4/5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-[24px] font-bold text-primary dark:text-inverse-primary">Marketplace</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-primary dark:text-inverse-primary relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-error text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Breadcrumbs -->
+<nav class="mb-gutter flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Início</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Calçados</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Tênis Nike Air Zoom Pegasus 40</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left: Image Gallery -->
+<!-- Left: Image Gallery -->
+<div class="md:col-span-7 grid grid-cols-12 gap-4">
+
+  <!-- Imagem Principal -->
+  <div class="col-span-12 rounded-xl overflow-hidden shadow-sm bg-white product-image-container border border-outline-variant/20">
+
+    <img
+      alt="Tênis Nike Air Zoom Pegasus 40"
+      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
+    />
+
+  </div>
+
+  <!-- Miniatura 1 -->
+  <div class="col-span-3 aspect-square rounded-lg overflow-hidden border-2 border-primary bg-white cursor-pointer">
+
+    <img
+      alt="Thumbnail 1"
+      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500&auto=format&fit=crop"
+    />
+
+  </div>
+
+  <!-- Miniatura 2 -->
+  <div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white cursor-pointer">
+
+    <img
+      alt="Thumbnail 2"
+      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=500&auto=format&fit=crop"
+    />
+
+  </div>
+
+  <!-- Miniatura 3 -->
+  <div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white cursor-pointer">
+
+    <img
+      alt="Thumbnail 3"
+      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=500&auto=format&fit=crop"
+    />
+
+  </div>
+
+  <!-- Miniatura 4 -->
+  <div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white cursor-pointer">
+
+    <img
+      alt="Thumbnail 4"
+      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?q=80&w=500&auto=format&fit=crop"
+    />
+
+  </div>
+
+</div>
+<!-- Right: Details & Purchase -->
+<div class="md:col-span-5 flex flex-col gap-base">
+<div class="bg-primary-container/10 inline-flex items-center px-3 py-1 rounded-full w-fit mb-2">
+<span class="text-primary font-label-bold text-label-bold">Destaque da Semana</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight">Tênis Nike Air Zoom Pegasus 40</h2>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+<span class="ml-2 font-label-bold text-label-bold text-on-surface-variant">4.8 (124 avaliações)</span>
+</div>
+</div>
+<div class="my-gutter">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">R$ 899,00</span>
+<div class="font-price-display text-price-display text-primary flex items-baseline gap-2">
+<span>R$ 699,00</span>
+<span class="text-success font-label-bold text-label-bold text-green-600">30% OFF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic">ou 10x de R$ 69,90 sem juros</p>
+</div>
+<!-- Variants: Color -->
+<div class="flex flex-col gap-3 mb-6">
+<label class="font-label-bold text-label-bold text-on-surface">Cor</label>
+<div class="flex gap-4">
+<button aria-label="Black" class="w-10 h-10 rounded-full bg-[#191c1e] ring-2 ring-primary ring-offset-2 transition-transform active:scale-90"></button>
+<button aria-label="Grey" class="w-10 h-10 rounded-full bg-[#e0e3e5] border border-outline-variant/30 transition-transform active:scale-90"></button>
+<button aria-label="Blue" class="w-10 h-10 rounded-full bg-[#003ec7] border border-outline-variant/30 transition-transform active:scale-90"></button>
+</div>
+</div>
+<!-- Variants: Quantity -->
+<div class="flex flex-col gap-3 mb-gutter">
+<label class="font-label-bold text-label-bold text-on-surface">Quantidade</label>
+<div class="flex items-center border border-outline-variant/50 rounded-lg w-fit bg-white">
+<button class="p-3 hover:bg-surface-variant/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="px-6 font-title-md text-title-md">1</span>
+<button class="p-3 hover:bg-surface-variant/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+
+  <button class="w-full bg-primary text-on-primary font-label-bold text-label-bold py-4 rounded-xl shadow-md transition-all active:scale-95 hover:bg-primary/90">
+    Comprar Agora
+  </button>
+
+  <button onclick="adicionarCarrinho()"
+  class="w-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold py-4 rounded-xl transition-all active:scale-95 hover:bg-secondary-container/80 flex items-center justify-center gap-2">
+
+    <span class="material-symbols-outlined">
+      shopping_cart
+    </span>
+
+    Adicionar ao Carrinho
+
+  </button>
+
+</div>
+<script>
+function adicionarCarrinho() {
+
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  const produto = {
+    nome: "Tênis Nike Air Zoom Pegasus 40",
+    preco: "R$ 699,90",
+    imagem: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop"
+  };
+
+  carrinho.push(produto);
+
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+  alert("Produto adicionado ao carrinho!");
+
+}
+</script>
+<!-- Delivery Info -->
+<div class="mt-gutter p-4 rounded-xl bg-surface-container-low flex items-start gap-4 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div>
+<p class="font-label-bold text-label-bold">Frete Grátis para todo o Brasil</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Entrega estimada entre 3 a 5 dias úteis.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Description (Asymmetric Layout / Bento) -->
+<section class="mt-stack-lg border-t border-outline-variant/30 pt-stack-lg">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-gutter">Detalhes Técnicos</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<h4 class="font-title-md text-title-md text-primary mb-4">Conforto e Performance</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+O Tênis Nike Air Zoom Pegasus 40 foi desenvolvido para oferecer máximo conforto,
+        leveza e desempenho durante corridas, treinos e uso casual no dia a dia.                    </p>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-primary text-on-primary p-8 rounded-2xl shadow-sm flex flex-col justify-center">
+<span class="material-symbols-outlined text-[48px] mb-4"><span class="material-symbols-outlined text-[48px] mb-4">
+  directions_run
+</span>
+
+<h4 class="font-title-md text-title-md mb-2">
+  Performance e Leveza
+</h4>
+
+<p class="font-body-sm text-body-sm opacity-90">
+  Desenvolvido para corridas, caminhadas e treinos intensos com máximo conforto e estabilidade.
+</p>
+
+</div>
+
+<!-- Bento Card 3 -->
+<div class="bg-surface-container-high p-8 rounded-2xl shadow-sm">
+
+<h4 class="font-title-md text-title-md text-on-surface mb-2">
+  Benefícios
+</h4>
+
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">
+check_circle
+</span>
+
+Amortecimento Air Zoom
+</li>
+
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">
+check_circle
+</span>
+
+Solado antiderrapante
+</li>
+
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">
+check_circle
+</span>
+
+Material respirável
+</li>
+
+</ul>
+
+</div>
+
+<!-- Bento Card 4 -->
+<div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 flex gap-6 items-center">
+
+<div class="hidden md:block w-32 h-32 rounded-lg overflow-hidden shrink-0">
+
+<img
+alt="Tênis Nike"
+class="w-full h-full object-cover"
+src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500&auto=format&fit=crop"
+/>
+
+</div>
+
+<div>
+
+<h4 class="font-title-md text-title-md text-on-surface mb-2">
+Conforto Premium
+</h4>
+
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+Cabedal leve e respirável com ajuste ergonômico para maior conforto durante o uso prolongado.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="mt-stack-lg">
+<div class="flex justify-between items-end mb-gutter">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Produtos Relacionados</h3>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-1 hover:underline" href="#">Ver tudo <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Smartwatch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern smartwatch with a minimalist circular silver frame and a high-resolution glowing digital interface displaying fitness metrics. Set against a clean, soft-blue studio backdrop with elegant lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45qbUKh9Vi_cLOWRdKLwHspObQaEyu8L4pl82UukL9EK1ZOmcQrFwZPwB5dlEC7T5vxtzQZgi7DbfRC7PGY1WF2Wnp1MyjTC8qRC7_cE6serIqdZnnDNPSexA4kf7XjWdnmWx0AwYwjpGoZY43m-rr0f0TYThMYfuEcRr0_EH9wjCx8yb3MKs8rDNK1gFH6LXI7KwMDy90YoVdcxLnKpl7o6mNz42R03wVTFc3GWy-8eZMogZ-dQDVIu3QiPNFktBQ8DGdKHsRSw"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Smartwatch Pro Series 5 - Edição Esportiva</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 459,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Earbuds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Compact white wireless earbuds in their open charging case, highlighting the glossy finish and magnetic docking. The aesthetic is clean, bright, and high-tech, typical of a professional product catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzlUMrwmWTLYEDPktCP4ydQl1mll0qd355eGfwXG_16-VW3GdKL9ISZpxA4umy0RFQfNNNEd4zDMDugkJ1RUwYixmLPO3fB8iD-rOESCCJetlmBx31TOp3F-gBL-qqlzSZ8MrdrryGHhOcKgloGjnWivKIBInzPXBchULDX0oTtPGObYLBFi-SBQkJtZE3jmrSEeJ3rFHVmFNhsN8uB-u3l3sTN1l2kRefPecfjTyaN6GYM9fzL2zABQjY2ovGy0kRuJTBn3TpNRw"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Fone In-Ear True Wireless Compact</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 299,90</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Case" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A durable, hard-shell carrying case for headphones made of premium synthetic fabric in a dark charcoal grey. It features a high-quality zipper and a sleek, compact profile. Professional studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8tarD6AGGelu6VncYgE7W6BirW72dTStHqFn7TOBVH78t33P32bJD5bJjg3ZJvWL7zs98ap0mFWFFnZDFaeSzxgYwvZ0arwp6pd8-io62KK6NoZIgrkIWKc9MMLmiRCNjW14X0GxiDG5W835JxnU3L7IHDb0tCjcCmOvTIzsrZC1IsHW53_c6x3ald_OW7bCCEWysgTsErJEvkzIUxop7I8RoAJYPDuixL87Ze1IUS0Is4xNWDsf16jsHqs4RdcuF67iHgh3jNwE"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Case Rígido para Fones de Ouvido</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 89,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Speaker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A portable Bluetooth speaker with a rugged, waterproof fabric wrap in deep blue. The design is modern and functional, shown in a clean environment with soft shadows and sharp focus on the control buttons." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bcqqb_ddxNzJXDZH9Wl9TVnSA7AfoB4csl3J7wzuUDXapoU1DeTdB22o3qFtD8PcVC93RFTGMTBUgETQY0V8wN5bCkpexLBPXrG0YHW746xGWCkPG_eK6ifhO5tNiTqrK7X_kVrsQFQyrFAN9G0rqVUAl2FkeyRb4d9-oKZWSu7QNk3imu2Gu55l0syKs5vHbRvPCTzbMT8nLVxuHbwGQv7gDStqI-nxpGrIItPb-HPSQj4GS1ieg07NNNo9iDxQfwDPl8hK5TQ"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Caixa de Som Bluetooth Waterproof</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 389,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface dark:bg-on-background border-t border-outline-variant/30 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Início</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-label-bold">Busca</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-bold text-label-bold">Favoritos</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary bg-secondary-container/50 dark:bg-on-secondary-fixed-variant rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-label-bold">Carrinho</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold">Perfil</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .product-card-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .product-card-shadow:hover {
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #003ec7;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-display-lg font-bold text-primary text-[24px] md:text-display-lg">Marketplace</h1>
+</div>
+<div class="hidden md:flex items-center bg-surface-container rounded-full px-4 py-2 w-1/3 mx-8">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-sm font-body-sm ml-2 outline-none" placeholder="Buscar produtos..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="transition-all duration-200 active:scale-95 text-primary hover:bg-surface-variant/50 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="transition-all duration-200 active:scale-95 text-primary hover:bg-surface-variant/50 p-2 rounded-full relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-error text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-24 md:pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Filters Sidebar -->
+<aside class="hidden md:block w-64 flex-shrink-0">
+<div class="sticky top-24 space-y-stack-md">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4">Categorias</h3>
+<ul class="space-y-2">
+<li><a class="flex items-center text-body-sm font-body-sm text-primary font-bold bg-primary-container/20 px-3 py-2 rounded-lg" href="#"><span class="material-symbols-outlined mr-2 text-[20px]" data-icon="devices">devices</span>Eletrônicos</a></li>
+<li><a class="flex items-center text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-variant px-3 py-2 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined mr-2 text-[20px]" data-icon="checkroom">checkroom</span>Moda</a></li>
+<li><a class="flex items-center text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-variant px-3 py-2 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined mr-2 text-[20px]" data-icon="home">home</span>Casa</a></li>
+<li><a class="flex items-center text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-variant px-3 py-2 rounded-lg transition-colors" href="#"><span class="material-symbols-outlined mr-2 text-[20px]" data-icon="sports_esports">sports_esports</span>Games</a></li>
+</ul>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4">Preço</h3>
+<div class="space-y-4">
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>R$ 0</span>
+<span>R$ 10.000+</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4">Marcas</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-primary transition-colors">TechNova</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-primary transition-colors">Aura Gear</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-primary transition-colors">Nexus Pro</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Listing -->
+<section class="flex-grow">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Eletrônicos</h2>
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-body-sm text-on-surface-variant hidden md:block">Ordenar por:</span>
+<select class="bg-surface border-outline-variant/50 rounded-lg text-body-sm font-body-sm px-3 py-2 outline-none focus:border-primary">
+<option>Destaques</option>
+<option>Menor Preço</option>
+<option>Maior Preço</option>
+<option>Mais Novos</option>
+</select>
+</div>
+</div>
+<!-- Bento-ish Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Product Card 1 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up professional photography of premium noise-cancelling wireless headphones in a sleek matte charcoal finish. The lighting is dramatic and directional, highlighting the metallic accents and plush leather earcups. The composition is clean and minimalist, set against a soft grey background that emphasizes the product's high-tech corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74B9yIt9MBn05CM2oEeHy5rbKZqH9HTT503yY7IH4I33qq8nhQfW164edGsocUhmtPG9Bis3n1Diqxr2RFcGrtm1rLD2yAO4h-m9BE3nGEZfwMXORYFs3cyQPI6IJ9yCl6aGpaqNW1ncKcTYwgQkFQPkLYAIw3GhW3-ltFlxnw1HktcfBvdH2RvwvO0HTpjmP3wCEDf2ZEfKdyCZKftCri5VcBZUAWI9s_VtGewtgwUPnPTBH3p5aD2S5AFWkmNzmW3j_Po48ryM"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Novo</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">TechNova</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Headphone Ultra Bass Wireless V5</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.9 (124)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 849,90</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A luxurious designer wristwatch with a minimalist white watch face and a high-quality tan leather strap. The watch is positioned on a crisp white surface with soft, diffused natural lighting creating subtle shadows. The overall visual style is elegant, modern, and professional, perfectly suited for a high-end fashion and lifestyle marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Tg8xSpy3p3NsBL9ofz7yZawM5nv3sQq5oOed46plRCbKpLfP89oA75G-REO5ds6LAJRZdd5vFjr1KHiSCJtnqMK1VFxcrctNQ-SRnnkWqqUGGdghe_EFCOlwoweyONohc_A_pLITTO1_sewzN_iw8o_cj3mGiOpmK6EHPGsy_SGx93xSKRDiO2ImW-tAcJ-geQmgnqxgfcShc5fU117R7bSyGrTaciBbAvngK5MU7dfl0Myfh8Elp6S34UrEl8uo_WGppK2z544"/>
+<span class="absolute top-2 left-2 bg-error text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Oferta</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Aura Gear</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Smartwatch Aura Edition Silver</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.8 (89)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 1.299,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A modern, slim digital tablet with a vibrant, high-resolution screen showing colorful abstract artwork. The device is captured in a sleek, high-key studio environment with bright, clean reflections on its glass surface. The mood is sophisticated and tech-forward, emphasizing precision engineering and premium build quality with professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvP-QLuU0b7YCCo8XQJFLVnMAXj_N3Jus9yY8eXw7GDQKckBuvudP5U9E6LdSzpquim1skjtDBTJxaS3I_IRfe1XQQdnBYx371mz1sTgnvtSHBd6zUfV70hBW2MgmsF2K-V2HdDZJLGIyBF_BaHvC8br72PvbfJft5sUvk_FEHvF7Hzfjp7rt2U5nCpbD6KkHRwQKGJ34g__0rXZuWTOeW4dOeBJZQ_nJol0LbFqxDAs-eHJ2oLGtZcUdMgvm91VhL3HgjItPynSQ"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Nexus Pro</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Tablet Nexus Pad 11" 256GB</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">5.0 (56)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 3.450,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A modern ergonomic computer mouse with a minimalist design, finished in a clean matte white with subtle grey accents. The mouse is showcased in a high-tech office setting with soft ambient lighting and a shallow depth of field. The visual style is crisp and corporate, highlighting the smooth curves and professional functionality of the product." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr2ONHn8X3uyAGXxdD_llA1akNX9jdtP12ARNI6kCwNKC6QgTf9igLDz4t4YfpKkwfvWj2dD_VPWHmJA-35QLpnV_3mAyzBBxkFQbUmaehMka0BVaOOBgQHjYX6f51Oje5NNaKkOuGiIIcNhYhbT3Pbzoi6DUi_nLT43sopG4jd64Ff35I8CoAgkfJQC9TFeGV92kX0Xf3iTv6zH5DIP9OX3YjGXgf6akKLdUsB_qNezD3FMTLTQECQWkG6y-_LlJAp66ry3lC0qY"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">TechNova</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Mouse Erggonômico Flow White</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.7 (210)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 299,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-performance premium laptop with a sleek metallic silver finish, open to display a crisp professional interface. The lighting is high-key and bright, reflecting a clean office environment. The overall aesthetic is focused on reliability, speed, and modern corporate productivity, with a minimalist and sophisticated visual language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUvxzgUlpqZJ8ee424sNCC_uqd_pXxFLpfZAVe3BDzxb8EFlE4v8ExFB2t42LYmh3E0wTQYesCyKbESZaaVWh-7ZOQY54Cz-gZu0_EjnEpYB9NxvaS3KA0blsyMNGnK4auAjv83TsfrK6yImkxQGvh_4_z2mSjUxGYSqUt2qFU368ukp5zzvN18PEtxtyyPiA6RK0XquudACEh9em-QqjDjDPhYJIyXjqthk1wKoAxGE06bD3ghjRP0cyb57nlsgMt7KU1-Rj5upY"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Nexus Pro</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Notebook Nexus Core i7 16GB</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.9 (45)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 5.890,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern high-fidelity wireless earbuds in a compact, sleek charging case. The product is presented with a soft-focus background in a bright, modern studio. The lighting highlights the glossy finish and the ergonomic design of the earbuds, creating a feeling of premium quality and advanced personal technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAc96X3anHnGw6VeTbfvCNT11m1nFRWajG_q40SvZIVMEYMW6txbr5sFRyMwZNd8UMud3RtKTLplxGQywwW4c8EnGGSL2gbGDTNl3KF1Pmift257RmWXau4rAu_0oBQ1bhBwAF16FHinYM1hrh_iv2ndLI-24DeuQ-O2ekRtvSdFSuhRhVCviCLBXXGW3_nDkLuXHi5fSgu3zQyXzbjg1Q95Aqn8_x3CDIE0be7npMnPgacOjPg4uKY7Oy8qjKzl2pnjvWeeC7DAc"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Novo</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Aura Gear</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Earbuds Aura Pods Pro Noise Control</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.6 (332)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 499,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 7 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional 4K computer monitor displaying a vibrant, high-contrast landscape image. The monitor has ultra-thin bezels and a minimalist stand, set on a modern wooden desk in a bright room with soft lighting. The visual style communicates precision, clarity, and a premium workspace environment for professionals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOLmXA-BTSlqllH35lntaMwpePGp7Kvt7xw9GAAt6zZ_eI27bndBDRaAkMkoj4ufXu-mXvR_nDHx1MpQJag7e3m5jFCSSSkxp5nWCz0ovbrvWynafrktk4UwE043Vg2vYo-UErdxM5s6Imn8bBgLYD6moXHP-BU2nM0Ox9AzNLfEh-faJmMgPQvUhngU9CukjexOWPXqa1C0UFK-VR8zmoI7A39_dHUupBv6XynaH86Q3xuJvXTxH5CL2YQ_lhmD6g9wAe7lcMPwk"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Nexus Pro</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Monitor Nexus 4K 27" IPS Pro</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.9 (18)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 2.780,00</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 8 -->
+<article class="bg-surface-container-lowest product-card-shadow rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sleek and modern wireless earbuds in a matte black finish, positioned artistically on a textured surface. The lighting is low-key and dramatic, casting soft shadows that highlight the elegant contours of the device. The mood is sophisticated and mysterious, aimed at a tech-savvy audience looking for high-performance audio gear in a premium marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABooMh7Ha54Oi7pAmvEjwmac-ipa7ZOi-hdovy6-jxA13xnDwiU33s1KVaIkGT5gj_c6V3XLxA_2qMF3nFDkDgxl1EI789TRGMOrWv7hkj-5BL2yj2sxwYCiIxZblfqFhROn7cQ7w4G6wpoDWX2p-IeoixhHxPwImSooDZ_iZFLngriwBjUEjMRjgCD2Ru4BGqBRBcgek9mt9J8wKfxjHALAZARHvmAqgZMmCDSmQhlYkqnPxj9YmZ5_dQzuYV7vBeO01kiVPMbyQ"/>
+<span class="absolute top-2 left-2 bg-error text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Sale</span>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<p class="text-[12px] font-bold text-outline uppercase tracking-tight mb-1">Aura Gear</p>
+<h3 class="font-title-md text-title-md text-on-surface text-[16px] leading-tight mb-2 line-clamp-2">Fone de Ouvido Aura Sport Waterproof</h3>
+<div class="mt-auto">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-500 text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface-variant">4.5 (102)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-price-display text-price-display text-primary text-[20px]">R$ 159,90</p>
+<button class="bg-secondary-container hover:bg-primary hover:text-white transition-colors p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<nav class="flex justify-center items-center mt-stack-lg gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center">1</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors font-bold">2</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors font-bold">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</nav>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-2 px-4 bg-surface border-t border-outline-variant/30 z-50 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[10px] font-bold">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[10px] font-bold">Favoritos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[10px] font-bold">Carrinho</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Perfil</span>
+</a>
+</nav>
+<!-- Navigation Drawer (Hidden initially, represented for structure) -->
+<div class="hidden fixed inset-0 bg-black/50 z-[60] backdrop-blur-sm">
+<div class="h-full w-80 bg-surface shadow-lg flex flex-col p-gutter gap-base rounded-r-xl">
+<div class="flex items-center gap-4 p-4 border-b border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-primary font-bold">U</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Olá, Usuário</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Ver minha conta</p>
+</div>
+</div>
+<nav class="flex-grow py-4 overflow-y-auto custom-scrollbar">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="devices">devices</span>
+<span class="font-body-lg text-body-lg">Eletrônicos</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="checkroom">checkroom</span>
+<span class="font-body-lg text-body-lg">Moda</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-primary bg-primary-container font-bold rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="sell">sell</span>
+<span class="font-body-lg text-body-lg">Promoções</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-body-lg text-body-lg">Meus Pedidos</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-lg text-body-lg">Configurações</span>
+</a>
+</nav>
+<div class="border-t border-outline-variant/30 p-4">
+<a class="flex items-center gap-4 text-error px-4 py-3 hover:bg-error-container/20 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-lg text-body-lg">Sair</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

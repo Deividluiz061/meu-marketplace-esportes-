@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marketplace - Resultados de busca</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#dae2fd",
+                      "inverse-primary": "#b7c4ff",
+                      "on-secondary-container": "#5c647a",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "outline": "#737688",
+                      "surface": "#f7f9fb",
+                      "primary": "#003ec7",
+                      "tertiary-container": "#006e95",
+                      "tertiary-fixed-dim": "#7bd0ff",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-high": "#e6e8ea",
+                      "surface-dim": "#d8dadc",
+                      "surface-container": "#eceef0",
+                      "on-primary-fixed": "#001452",
+                      "surface-bright": "#f7f9fb",
+                      "surface-tint": "#004ced",
+                      "on-primary-container": "#dfe3ff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-secondary-fixed": "#131b2e",
+                      "on-tertiary-fixed-variant": "#004c69",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-tertiary-container": "#caeaff",
+                      "on-surface-variant": "#434656",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-container-low": "#f2f4f6",
+                      "outline-variant": "#c3c5d9",
+                      "on-background": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#dde1ff",
+                      "tertiary-fixed": "#c4e7ff",
+                      "background": "#f7f9fb",
+                      "secondary": "#565e74",
+                      "on-surface": "#191c1e",
+                      "on-primary-fixed-variant": "#0038b6",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#001e2c",
+                      "primary-fixed-dim": "#b7c4ff",
+                      "primary-container": "#0052ff",
+                      "tertiary": "#005474",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "stack-md": "24px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "stack-lg": "48px",
+                      "container-max": "1280px",
+                      "stack-sm": "12px"
+              },
+              "fontFamily": {
+                      "title-md": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "label-bold": ["Plus Jakarta Sans"],
+                      "price-display": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "body-sm": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                      "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24 md:pb-0 pt-16">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 hover:bg-surface-variant/50 dark:hover:bg-surface-variant/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-display-lg font-bold text-primary dark:text-inverse-primary hidden md:block" style="font-size: 24px; line-height: 1;">Marketplace</h1>
+</div>
+<div class="flex-1 max-w-xl mx-gutter hidden md:block">
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container rounded-full px-12 py-2 border-none focus:ring-2 focus:ring-primary outline-none text-body-sm" placeholder="Buscar em eletrônicos, moda e mais..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="transition-all duration-200 active:scale-95 hover:bg-surface-variant/50 dark:hover:bg-surface-variant/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md">
+<!-- Search Info Header -->
+<section class="mb-stack-md">
+<nav class="flex items-center gap-2 text-on-surface-variant text-body-sm mb-base">
+<span>Início</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span>Resultados de busca</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">
+                        Resultados para <span class="text-primary">"Smartphones"</span>
+</h2>
+<p class="text-on-surface-variant text-body-lg">128 produtos encontrados correspondentes aos seus termos</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 border border-outline-variant/30 px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="sort">sort</span>
+<span class="font-label-bold text-label-bold">Ordenar por</span>
+</button>
+<button class="flex items-center gap-2 border border-outline-variant/30 px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors md:hidden">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="filter_list">filter_list</span>
+<span class="font-label-bold text-label-bold">Filtros</span>
+</button>
+</div>
+</div>
+</section>
+<div class="flex gap-gutter">
+<!-- Sidebar Filters (Desktop) -->
+<aside class="hidden md:flex flex-col w-64 shrink-0 gap-stack-md">
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-stack-sm">Categorias</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 text-body-sm cursor-pointer hover:text-primary transition-colors">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+                            Smartphones
+                        </label>
+<label class="flex items-center gap-3 text-body-sm cursor-pointer hover:text-primary transition-colors">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+                            Acessórios
+                        </label>
+<label class="flex items-center gap-3 text-body-sm cursor-pointer hover:text-primary transition-colors">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+                            Moda Tech
+                        </label>
+</div>
+</div>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-stack-sm">Faixa de Preço</h3>
+<div class="space-y-4">
+<input class="w-full accent-primary" type="range"/>
+<div class="flex items-center justify-between gap-2">
+<div class="bg-surface-container rounded-lg px-3 py-2 flex-1 text-center font-label-bold">R$ 0</div>
+<span class="text-outline-variant">a</span>
+<div class="bg-surface-container rounded-lg px-3 py-2 flex-1 text-center font-label-bold">R$ 5.000+</div>
+</div>
+</div>
+</div>
+<div class="h-[1px] bg-outline-variant/30"></div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-stack-sm">Marcas Premium</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 text-body-sm cursor-pointer">
+<input class="border-outline-variant text-primary focus:ring-primary h-5 w-5" name="brand" type="radio"/>
+                            Nexus Vision
+                        </label>
+<label class="flex items-center gap-3 text-body-sm cursor-pointer">
+<input class="border-outline-variant text-primary focus:ring-primary h-5 w-5" name="brand" type="radio"/>
+                            Aura Tech
+                        </label>
+<label class="flex items-center gap-3 text-body-sm cursor-pointer">
+<input class="border-outline-variant text-primary focus:ring-primary h-5 w-5" name="brand" type="radio"/>
+                            StyleCore
+                        </label>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sleek, modern titanium-colored smartphone held in a professional studio setting with dramatic side lighting. The phone features a triple-lens camera system and a pristine screen. The background is a clean, neutral gradient of light grays and whites, emphasizing a premium corporate and high-tech aesthetic. Reflections on the glass surface indicate high-quality manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0GXUQLqMJS51ZEBs9lJKs960fJ5pAQdTEs1RHOHA_yHaEM1i9t9dEeCtkXkKi4v6hisKQhlUbcykRvNxWUW_pMfNi7jj2rH593c_k78gx_IA-NzqCNOllBeo40kNIe4fTguRSnzgs2BPY697614xW4Jq6KUwTR3cu-7cqlk-FtQy4t1rMyeOYtfMKTbGonzz7lm5ZxvUY8OtlFkkYHaLMcdTQcqTr0hzssAy1rmMYD9zpjUuKETw_GpdnFR8TRkGmmoP5PZWmLXc"/>
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 rounded-full text-[12px] font-bold">Lançamento</div>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-md p-2 rounded-full shadow-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="text-on-surface-variant text-[12px] font-label-bold uppercase tracking-wider mb-1">Nexus Vision</p>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Smartphone Alpha Pro Max 5G 256GB</h4>
+<div class="flex items-center gap-1 text-[#facc15] mb-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star_half" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-on-surface-variant text-[12px] ml-1">(4.8)</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-primary">R$ 4.599</span>
+<span class="text-on-surface-variant text-body-sm line-through">R$ 5.299</span>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label-bold transition-all active:scale-95 flex items-center justify-center gap-2 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                                Adicionar
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sophisticated midnight blue smartphone displayed on a minimalist architectural podium. The lighting is soft and diffused, creating elegant gradients across the metallic finish of the device. The composition is clean and organized, following a strict 12-column grid aesthetic. The mood is calm and trustworthy, typical of a professional premium marketplace for electronics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB56XrEMYcmP0ObFNNBjMPYlKqc1xR6UOewZ4x6CQyQuwjoYkLE5RmTehXVPH6hN4aliU9iTIy7oWvEh0ebRv1gAVWQC_AzMCppd5krmPk-7gWVT99Mow_7d5bktIhGSOJPP8hTmiAgZS0EI5X8nXbok8bmwPYp6crPSpe3d7gz-HqOeh4VWkX294m8fK4fhiFVqH8k3etB6yPmNoE1u5JSSLO25U8F9hwVNKSKpnmm0PGQipkF5GF6vAPKlmZRx03Vacdba9YdbGA"/>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-md p-2 rounded-full shadow-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="text-on-surface-variant text-[12px] font-label-bold uppercase tracking-wider mb-1">Aura Tech</p>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Smartphone Aura S24 Vision Ultra</h4>
+<div class="flex items-center gap-1 text-[#facc15] mb-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface-variant text-[12px] ml-1">(5.0)</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-primary">R$ 3.899</span>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label-bold transition-all active:scale-95 flex items-center justify-center gap-2 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                                Adicionar
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A pair of high-end wireless noise-canceling headphones in a clean matte white finish, positioned elegantly on a minimalist workspace. The lighting is high-key and bright, evoking a sense of clarity and modern design. The background is slightly blurred with soft wooden textures and neutral tones, aligning with a professional and reliable brand personality for premium audio equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArBLaMehDGeUaveA2QEXsqxmiH4AMNa0wGSOm2IV2oIludc7LLTpYC64VLvlwjx3-k9xpQ4HtYI8IrlU9wq84-WxEbRsf6kKSuwBgnTiIR6cJUuHHMH4e-Trk3LrrB7YeraMPUusdmhtP49CjszrHF3teu233TGB_hU5mCLc7sGhpRUH53VRb2KNN-e5RhTG_JRrMscVGZndOUk6Cr1SSvrT_4Fc_TUKK-2lWkB0cl0uNuY9YusGz9rmNhj96Pfvl_72upqn6MyVs"/>
+<div class="absolute top-3 left-3 bg-error text-on-error px-3 py-1 rounded-full text-[12px] font-bold">-20%</div>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-md p-2 rounded-full shadow-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="text-on-surface-variant text-[12px] font-label-bold uppercase tracking-wider mb-1">Aura Tech</p>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Fone de Ouvido Noise Cancel PRO 2</h4>
+<div class="flex items-center gap-1 text-[#facc15] mb-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="text-on-surface-variant text-[12px] ml-1">(4.2)</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-primary">R$ 1.299</span>
+<span class="text-on-surface-variant text-body-sm line-through">R$ 1.625</span>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label-bold transition-all active:scale-95 flex items-center justify-center gap-2 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                                Adicionar
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A luxury designer watch with a silver metallic band and a minimalist white face, captured with soft macro photography. The setting is a clean, bright, contemporary living space with large windows providing natural, even light. The focus is sharp on the watch's intricate details, conveying precision and reliability. The overall aesthetic is professional, modern, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-LbO3qhQG4wHE3OZ2RAHO7g_6Gl9Jd91kkg9RZdfCe7kEZoZ8nXy56pmpVfk3m0t5GQPPzcbinqcDrP8M_7-vBOin_ZL65g9tEdlgJ194jScynVPdLGAqje3tRWzEJsEz2cabZsbDTopeRnB-M4tsdyCxAIpE1djg0kUvlGkjKxhFpInbrKjocB5BThMPAzK9hwqqyIMWtbrtxKCYAE0PVbMlahSzMdtLowW13YxbFCvYcyCUhLG6I0NiunXObHeXQKM7NZogo4o"/>
+<button class="absolute top-3 right-3 bg-white/80 backdrop-blur-md p-2 rounded-full shadow-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<p class="text-on-surface-variant text-[12px] font-label-bold uppercase tracking-wider mb-1">StyleCore</p>
+<h4 class="font-title-md text-title-md text-on-surface line-clamp-2 leading-tight mb-2">Relógio Inteligente Nexus Chrono v4</h4>
+<div class="flex items-center gap-1 text-[#facc15] mb-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface-variant text-[12px] ml-1">(4.9)</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-price-display text-price-display text-primary">R$ 2.450</span>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-label-bold transition-all active:scale-95 flex items-center justify-center gap-2 hover:bg-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                                Adicionar
+                            </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex justify-center items-center gap-2 pb-stack-lg">
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary font-label-bold">1</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container font-label-bold">2</button>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container font-label-bold">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container font-label-bold">12</button>
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface dark:bg-on-background border-t border-outline-variant/30 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90 hover:bg-surface-container-high dark:hover:bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-[10px]">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary bg-secondary-container/50 dark:bg-on-secondary-fixed-variant rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-[10px]">Busca</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90 hover:bg-surface-container-high dark:hover:bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-bold text-[10px]">Favoritos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90 hover:bg-surface-container-high dark:hover:bg-surface-container-highest p-2 rounded-lg relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-[10px]">Carrinho</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error text-[10px] rounded-full flex items-center justify-center">3</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90 hover:bg-surface-container-high dark:hover:bg-surface-container-highest p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-[10px]">Perfil</span>
+</div>
+</nav>
+</body></html>

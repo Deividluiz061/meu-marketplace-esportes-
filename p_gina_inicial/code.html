@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marketplace | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary transition-all duration-200 active:scale-95">menu</button>
+<h1 class="font-display-lg text-title-md md:text-display-lg font-bold text-primary">Marketplace</h1>
+</div>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<a href="../resultados_da_busca/code.html">
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary text-body-sm" placeholder="Buscar produtos, marcas e mais..." type="text"/>
+</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<!-- Botão Criar Conta -->
+<a href="../criar_conta/code.html" class="hidden md:flex items-center gap-1.5 bg-secondary-container text-on-secondary-container font-label-bold text-label-bold px-4 py-2 rounded-full transition-all hover:bg-secondary-container/80 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+Criar Conta
+</a>
+<!-- Botão Entrar -->
+<a href="../entrar/code.html" class="hidden md:flex items-center gap-1.5 text-primary font-label-bold text-label-bold px-3 py-2 rounded-full transition-all hover:bg-surface-variant/50 active:scale-95">
+<span class="material-symbols-outlined text-[18px]">login</span>
+Entrar
+</a>
+<!-- Carrinho -->
+<a href="../carrinho_de_compras/code.html" class="material-symbols-outlined text-on-surface-variant transition-all duration-200 active:scale-95 hover:bg-surface-variant/50 p-2 rounded-full">shopping_cart</a>
+<!-- Perfil -->
+<a href="../meu_perfil/code.html" class="hidden md:block w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
+<img alt="Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAULelf0ikN2H5JAj8UtMe6dCdnus4GfnkTxd2yYVB4a-jmU9lW5Ek13-MAaU-KcopWyBDUSUdrOqQfjxHMWc0KdAhtkGBdbGv9jVBbBb6IZcwfl7fUh215pcHLRZVGWIUkTv0AW_q0khOWE3cbj46__C-JtN_TmajhSoDifvTC3fcmW76RDqKoNbRZen7s_wArh2-03uX99pdWBOoTZHh8L14XgrtmeTo4PtqRS71ER_xvbEMbo1TP0LT8_IwhapkrBLaIccwlVAs"/>
+</a>
+</div>
+</header>
+
+<main class="pt-20 pb-24 md:pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+
+<!-- Hero Banner -->
+<section class="relative w-full aspect-[21/9] rounded-xl overflow-hidden mb-stack-lg group shadow-sm">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQWSpoDLdvRAiX1i1hBu7U9RExofNPp8Ysf_zfu6k4rEzbd1LYL89zDPyEYtuPOmwCgt9QI3Ff-vhXobFdz5wiBpMh_oliMHQebEk0CYj0pVLZiPyM4pNbt6hWUw5vVqKAvlJVERuRItaL_o2IqDMYh_m23IfllAZBg16QkUAfJtRAaluyF8HAquB2RD5crUGaSyN37rraqWa_bAKLhd9rngAcxjOAMZIoc9Sbw7R-Xmohp9iXOkzgXSpBsE80igF53lmjEqAKrNs"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/60 to-transparent flex flex-col justify-center px-8 md:px-16">
+<span class="inline-block bg-primary-container text-on-primary-fixed-variant font-label-bold text-label-bold px-3 py-1 rounded-full mb-4 w-fit">OFERTA DA SEMANA</span>
+<h2 class="text-white font-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-2">Tecnologia &amp; Estilo<br/>com até 40% OFF</h2>
+<p class="text-white/80 font-body-lg text-body-lg mb-6 max-w-md hidden md:block">Explore as melhores coleções de eletrônicos e moda internacional com entrega prioritária.</p>
+<button class="bg-primary text-on-primary font-label-bold px-8 py-3 rounded-lg w-fit transition-all hover:scale-105 active:scale-95">Ver Ofertas</button>
+</div>
+</section>
+
+<!-- Categories Section -->
+<section class="mb-stack-lg">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="font-headline-lg text-title-md md:text-headline-lg text-on-surface">Categorias</h3>
+<a class="text-primary font-label-bold hover:underline" href="#">Ver tudo</a>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-gutter">
+
+<!-- Moda (arquivo na RAIZ) -->
+<a href="../categoria_moda.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">checkroom</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Moda</span>
+</a>
+
+<!-- Casa (arquivo na RAIZ) -->
+<a href="../categoria_casa.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">home</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Casa</span>
+</a>
+
+<!-- Games (arquivo na RAIZ) -->
+<a href="../categoria_games.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">sports_esports</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Games</span>
+</a>
+
+<!-- Esportes (arquivo na RAIZ) -->
+<a href="../categoria_esportes.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Esportes</span>
+</a>
+
+<!-- Beleza (arquivo na RAIZ) -->
+<a href="../categoria_beleza.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Beleza</span>
+</a>
+
+<!-- Eletrônicos -->
+<a href="../resultados_da_busca/code.html" class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary-container flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">devices</span>
+</div>
+<span class="font-label-bold text-body-sm text-on-surface-variant">Eletrônicos</span>
+</a>
+
+</div>
+</section>
+
+<!-- Featured Products -->
+<section class="mb-stack-lg">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="font-headline-lg text-title-md md:text-headline-lg text-on-surface">Produtos em Destaque</h3>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-variant/50"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-variant/50"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+
+<!-- Product Card 1 - Headphone -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] transition-all flex flex-col group">
+<div class="relative aspect-square overflow-hidden bg-surface-container">
+<a href="../detalhes_do_produto/code.html">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQiL3-uNJfi0HsobWj35AWuUrTRs8fZ9eTISkSxOWsKEh5JeE9kKOpQLVkS0be6FUwo0COKDZIunuPrz6GtrMT-ULJH7h1tEWy5LUP-1h9XmNGtribFMEqenXSwwZlTG-SqrVknK6VIP2BOKefIKhBxbktAHRdTmkjRiFUBsFpsZxCaFSATVSLcaEOxR3hBbbm3EJkX2HZ9HZ8VpMxhjzWwV9ghi9Wzp3JOPMSh-CkmygvgNNjIV5eiB7wQUFMbrIlkOoTt3JrZSQ"/>
+</a>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2">
+<span class="text-xs font-label-bold text-outline uppercase tracking-wider">Eletrônicos</span>
+<a href="../detalhes_do_produto/code.html">
+<h4 class="font-title-md text-body-lg text-on-surface line-clamp-2">Headphone Premium Noise Cancelling v2</h4>
+</a>
+<div class="mt-auto">
+<p class="text-primary font-price-display text-price-display">R$ 1.299,00</p>
+<p class="text-xs text-on-surface-variant">10x de R$ 129,90</p>
+</div>
+<button class="mt-3 w-full py-2 bg-primary text-on-primary font-label-bold rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+Adicionar
+</button>
+</div>
+</div>
+
+<!-- Product Card 2 - Relógio -->
+<a href="../relogio_executive_silver/code.html" class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] transition-all flex flex-col group block">
+<div class="relative aspect-square overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=400&h=400&fit=crop"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="event.stopPropagation(); return false;">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2">
+<span class="text-xs font-label-bold text-outline uppercase tracking-wider">Acessórios</span>
+<h4 class="font-title-md text-body-lg text-on-surface line-clamp-2">Relógio Executive Silver</h4>
+<div class="mt-auto">
+<p class="text-primary font-price-display text-price-display">R$ 899,90</p>
+<p class="text-xs text-on-surface-variant">10x de R$ 89,99 sem juros</p>
+</div>
+<div class="mt-3 w-full py-2 bg-primary text-on-primary font-label-bold rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+Adicionar
+</div>
+</div>
+</a>
+
+<!-- Product Card 3 - Tênis -->
+<a href="../tenis_performance_air/code.html" class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] transition-all flex flex-col group block">
+<div class="relative aspect-square overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="event.stopPropagation(); return false;">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2">
+<span class="text-xs font-label-bold text-outline uppercase tracking-wider">Esportes</span>
+<h4 class="font-title-md text-body-lg text-on-surface line-clamp-2">Tênis Nike Air Zoom Pegasus 40</h4>
+<div class="mt-auto">
+<p class="text-primary font-price-display text-price-display">R$ 699,90</p>
+<p class="text-xs text-on-surface-variant">10x de R$ 69,99 sem juros</p>
+</div>
+<div class="mt-3 w-full py-2 bg-primary text-on-primary font-label-bold rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+Adicionar
+</div>
+</div>
+</a>
+
+<!-- Product Card 4 - Caixa de Som -->
+<a href="../caixa_de_som_bluetooth_pro_360.html" class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_12px_30px_rgba(0,0,0,0.08)] transition-all flex flex-col group block">
+<div class="relative aspect-square overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="event.stopPropagation(); return false;">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-2">
+<span class="text-xs font-label-bold text-outline uppercase tracking-wider">Eletrônicos</span>
+<h4 class="font-title-md text-body-lg text-on-surface line-clamp-2">Caixa de Som Bluetooth Pro 360</h4>
+<div class="mt-auto">
+<p class="text-primary font-price-display text-price-display">R$ 449,00</p>
+<p class="text-xs text-on-surface-variant">4x de R$ 112,25</p>
+</div>
+<div class="mt-3 w-full py-2 bg-primary text-on-primary font-label-bold rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+Adicionar
+</div>
+</div>
+</a>
+</div>
+</section>
+
+<!-- Promotional Banner Grid -->
+<section class="grid md:grid-cols-2 gap-gutter mb-stack-lg">
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXHN7zWnEJ3mpbxhwxNI0IrxUqcXCi4kFp8V4yNQaI4GOXMiz0YxMA647LHSVPmqXg87SS69GSUHJyoJtwH50JTwrMLGuJqhWQAH4oy2S800rtv9JMy_YwGwj-C9VYjDD3CbG6QfGboqVv2vqYJIBKLy6ofFvmrLKrkqkk6nez_md9Y91e6BqP9-cYQ69TGnkeTm-ePBlET1F2d7peMsf9mxJCxpR9Hx03jhz7DBc7t1F2JCCA2FcjLS-7dyp5kTOPya8mKAc7N4s"/>
+<div class="absolute inset-0 bg-primary/40 flex flex-col justify-center p-8">
+<h3 class="text-white font-headline-lg-mobile md:font-headline-lg font-bold">Moda Feminina</h3>
+<p class="text-white/90 font-label-bold mb-4">Novidades da estação</p>
+<button class="text-white border-2 border-white px-4 py-2 rounded-lg font-label-bold w-fit hover:bg-white hover:text-primary transition-all">Explorar</button>
+</div>
+</div>
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkOLc2l9QOi45ZgoVznhGKNI_YburbocSEwvCI6izn9XJ4dfl3nUiO9kP4jkQWUBWx0FBnDb-1I96dzJQLa5YS9KB7XhxcC2Ds3lE6JiVvqa0ifwF8WCt5Ivs8trNarmPgl27831MTD_3lpWcdkO3QRj_CT20xRH3gyvlMy387G__59zvS8OfSv1XTaC98vOXSi3Tyux2omVpM7K1AwcoIxqeWb5m1qd5Rz34_5YTitNsDGrrMdXcgifbln-ekJrtr3ixxKhBoIkQ"/>
+<div class="absolute inset-0 bg-secondary/40 flex flex-col justify-center p-8">
+<h3 class="text-white font-headline-lg-mobile md:font-headline-lg font-bold">Tech World</h3>
+<p class="text-white/90 font-label-bold mb-4">Gadgets de última geração</p>
+<button class="text-white border-2 border-white px-4 py-2 rounded-lg font-label-bold w-fit hover:bg-white hover:text-secondary transition-all">Ver Mais</button>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface border-t border-outline-variant/30 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-xl">
+<a href="../p_gina_inicial/code.html" class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-bold text-[10px]">Início</span>
+</a>
+<a href="../resultados_da_busca/code.html" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-bold text-[10px]">Busca</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-bold text-[10px]">Favoritos</span>
+</a>
+<a href="../carrinho_de_compras/code.html" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-bold text-[10px]">Carrinho</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-[10px]">Perfil</span>
+</a>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Fragment (Source: JSON) -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-display-lg text-display-lg font-bold text-primary">Marketplace</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-margin-mobile pt-24 pb-base">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-container-max w-full items-center">
+<!-- Left Side: Visual/Branding (Desktop Only) -->
+<div class="hidden md:flex md:col-span-6 flex-col gap-stack-md pr-margin-desktop">
+<h1 class="font-headline-lg text-headline-lg text-primary">Bem-vindo de volta ao seu Marketplace.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Acesse sua conta para gerenciar seus pedidos, favoritar novos produtos e explorar as últimas tendências em moda e tecnologia com exclusividade.</p>
+<div class="rounded-xl overflow-hidden shadow-sm aspect-video bg-surface-variant">
+<img alt="Marketplace Interior" class="w-full h-full object-cover" data-alt="A high-end, contemporary retail space featuring minimalist white shelving and bright, professional studio lighting. The environment is clean and spacious with a sophisticated palette of soft grays and deep blues, reflecting a modern corporate aesthetic. Elegant product displays of electronics and fashion items are visible in the background, creating an atmosphere of reliability and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB1jbB0DCKC5bDhdSvu-ewmAN_vLvacx_sDWIgcIkfK87O2WxVZdiajr5dTtFy9tODjD16UIadwqXJ_9xgglvoGu-SsvlpzvckMEE0sBaz9fpSKjpTvwvsw3-uZrXMKhRyzBVC5IefGFMZa60FhpWRqcYrTcvZGBwOePir1yaJHBrVB9gx9OGN9Cfy10M-CCnzW4sFRpIpxLRsaKga7qobLcAcdBYisNBAzx33nqUREsnCmZBrnDkkXwf7SudhUhT9YEiVrO8ue3A"/>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="md:col-span-6 lg:col-span-5 lg:col-start-8">
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-base">Login</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Insira suas credenciais para continuar.</p>
+</div>
+<form class="flex flex-col gap-stack-md" onsubmit="return false;">
+<div class="flex flex-col gap-base">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="email">E-mail</label>
+<input class="w-full p-4 rounded-lg border border-outline-variant bg-surface-bright focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none font-body-lg text-body-lg" id="email" placeholder="nome@exemplo.com" type="email"/>
+</div>
+<div class="flex flex-col gap-base">
+<div class="flex justify-between items-center">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="password">Senha</label>
+<a class="font-label-bold text-label-bold text-primary hover:underline transition-all" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<input class="w-full p-4 rounded-lg border border-outline-variant bg-surface-bright focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none font-body-lg text-body-lg" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-full font-label-bold text-label-bold hover:bg-surface-tint transition-all duration-200 active:scale-95 shadow-sm" type="submit">
+                            Entrar
+                        </button>
+</form>
+<div class="my-stack-lg flex items-center gap-base">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ou entre com</span>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="grid grid-cols-2 gap-stack-sm">
+<button class="flex items-center justify-center gap-base border border-outline-variant py-3 rounded-xl hover:bg-surface-variant/50 transition-all active:scale-95">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpun2VCT91HtGFKvnkJ5xGMQAUQaVVAvfMzJZtZFgm3RN-aQO8GSN2rL829cU63mFQBRRVu5KFJsnDc84-SGUvsPHMtll5DNG0eyIjyUsxCR_v7Y4RijTnz-TyK-4dLfK1Nlo6e23M-wTx_r9zGJkITzahwl7jC278MEFwejObaDCSzIXz-GeBaOOYhAopi_XWU57URpvfRVeDkp_cNaFuqaBQ9pB8I9wlQI-yfHPEhMXQGMx9hiGdDZtksNZMws9a5YblRNMxsA"/>
+<span class="font-label-bold text-label-bold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-base border border-outline-variant py-3 rounded-xl hover:bg-surface-variant/50 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[#1877F2]" data-icon="facebook" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+<span class="font-label-bold text-label-bold text-on-surface">Facebook</span>
+</button>
+</div>
+<div class="mt-stack-lg text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Não tem uma conta? 
+                            <a class="font-label-bold text-label-bold text-primary hover:underline" href="#">Cadastre-se agora</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-stack-md px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-sm text-on-surface-variant font-body-sm text-body-sm">
+<p>© 2024 Marketplace. Todos os direitos reservados.</p>
+<div class="flex gap-stack-md">
+<a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Ajuda</a>
+</div>
+</div>
+</footer>
+</body></html>

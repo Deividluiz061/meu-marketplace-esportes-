@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finalizar Compra - Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f7f9fb;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .checkout-grid {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 32px;
+      }
+      @media (max-width: 1024px) {
+        .checkout-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-display-lg text-title-md font-bold text-primary">Marketplace</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant hidden md:block">Pagamento Seguro</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="checkout-grid">
+<!-- Left Column: Checkout Flow -->
+<div class="space-y-gutter">
+<!-- Progress Stepper -->
+<div class="flex items-center justify-between mb-stack-lg overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex items-center gap-3 shrink-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<span class="font-label-bold text-label-bold text-primary">Entrega</span>
+</div>
+<div class="flex-grow h-[2px] bg-outline-variant mx-4 min-w-[20px]"></div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold">2</div>
+<span class="font-label-bold text-label-bold text-on-surface-variant">Pagamento</span>
+</div>
+<div class="flex-grow h-[2px] bg-outline-variant mx-4 min-w-[20px]"></div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold">3</div>
+<span class="font-label-bold text-label-bold text-on-surface-variant">Revisão</span>
+</div>
+</div>
+<!-- Section: Shipping Address -->
+<section class="bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-lg text-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                            Endereço de Entrega
+                        </h2>
+<button class="text-primary font-label-bold text-label-bold hover:underline">Alterar</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 rounded-lg border-2 border-primary bg-primary/5 flex flex-col gap-1 relative">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold">Casa (Principal)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rua das Flores, 123 - Apto 45</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jardim Paulista, São Paulo - SP</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CEP: 01234-567</p>
+</div>
+<button class="p-4 rounded-lg border-2 border-dashed border-outline-variant hover:border-primary hover:bg-surface-container transition-colors flex flex-col items-center justify-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined">add_location</span>
+<span class="font-label-bold text-label-bold">Novo Endereço</span>
+</button>
+</div>
+</section>
+<!-- Section: Payment Method -->
+<section class="bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<h2 class="font-headline-lg text-title-md flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">payments</span>
+                        Método de Pagamento
+                    </h2>
+<div class="space-y-4">
+<!-- Card Option -->
+<label class="flex items-center p-4 rounded-lg border border-outline-variant hover:bg-surface-container cursor-pointer transition-all group">
+<input checked="" class="w-5 h-5 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+<div class="ml-4 flex-grow flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">credit_card</span>
+<div>
+<p class="font-label-bold text-label-bold">Cartão de Crédito</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Até 12x sem juros</p>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-8 h-5 bg-surface-variant rounded"></div>
+<div class="w-8 h-5 bg-surface-variant rounded"></div>
+</div>
+</label>
+<!-- Pix Option -->
+<label class="flex items-center p-4 rounded-lg border border-outline-variant hover:bg-surface-container cursor-pointer transition-all">
+<input class="w-5 h-5 text-primary border-outline focus:ring-primary" name="payment" type="radio"/>
+<div class="ml-4 flex-grow flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">qr_code_2</span>
+<div>
+<p class="font-label-bold text-label-bold">Pix</p>
+<p class="font-body-sm text-body-sm text-tertiary font-bold">5% de desconto extra</p>
+</div>
+</div>
+</label>
+<!-- Credit Card Form (Visible if Card Selected) -->
+<div class="mt-6 p-6 bg-surface rounded-lg border border-outline-variant/50 space-y-4">
+<div class="grid grid-cols-1 gap-4">
+<div>
+<label class="block font-label-bold text-body-sm text-on-surface-variant mb-1">Número do Cartão</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-body-sm text-on-surface-variant mb-1">Nome no Cartão</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="Como impresso no cartão" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-bold text-body-sm text-on-surface-variant mb-1">Validade</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="MM/AA" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-body-sm text-on-surface-variant mb-1">CVV</label>
+<input class="w-full p-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Order Review -->
+<section class="bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<h2 class="font-headline-lg text-title-md flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+                        Revisão do Pedido
+                    </h2>
+<div class="divide-y divide-outline-variant/30">
+<div class="py-4 flex gap-4">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden flex-shrink-0">
+<img alt="Tênis Esportivo" class="w-full h-full object-cover" data-alt="A high-end professional photography of a vibrant red performance sneaker against a clean, minimalist studio background. The lighting is soft and cinematic, highlighting the intricate mesh textures and sleek aerodynamic design of the footwear. The overall mood is modern and energetic, fitting for a premium sports marketplace. High contrast and razor-sharp details capture every stitch and material nuance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBohEh-cZ66ylXIpC6F6mFfR60r67kkTmFGFiv0gPxo0Ah_EjTaXyK-iQz6eXUO4SR-vZ9peH5O-_bejEpgHQT5JSylFKWtN94V9--904bXGrWcn0CV1i5t5fVaXBsWkxj7MvubGM-GlfSKPMYGIRFAgN4f3ilAhrS42vk1jfzeCtgdTMIOfjZjnlLFO2ncZarAlOi8eYU1hwgG3k2lDuLomsGI2fg8wO64WJ4nHkqt7jUEe4hMdfwhQLfprGC_QO14YlehMXM8iV4"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-body-lg">Tênis Performance Ultra</h3>
+<p class="text-body-sm text-on-surface-variant">Tamanho: 42 | Cor: Vermelho</p>
+<p class="font-label-bold text-primary mt-1">R$ 599,90</p>
+</div>
+</div>
+<div class="py-4 flex gap-4">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden flex-shrink-0">
+<img alt="Relógio Minimalista" class="w-full h-full object-cover" data-alt="A sophisticated close-up of a minimalist white wristwatch with a light tan leather strap, resting on a clean marble surface. The lighting is bright and airy, creating a high-key aesthetic that emphasizes elegance and precision. Soft shadows give the object a tactile, three-dimensional feel. The image communicates luxury and timeless design through its simple, uncluttered composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl8VYrMQPAtajHSsiaJl_yHxPrFqzRbD6hze3uRNr_Hi1ZN9INmfmfA8-2w1woMJK-UginjnJKgnGYX_ZVZWOWMcBQKs3T9ictkRuK6indoyJPUcrGAc95rM9M1GE8iRG8u9r9CkMsFYfD0e4oby2qpo5SBymKlCy1cyEGLjo8DnM2J3f3fzFX6r-rDjWk1Rwlv_McEtqsdxGIF5-f6KM3iWNX9ZKiUXfsu-mCwhCIu4Qe2QmhpHhxWQVk08VOp1x34VWNmgcu42c"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-body-lg">Relógio Minimalist Silver</h3>
+<p class="text-body-sm text-on-surface-variant">Cor: Prata | Pulseira: Couro</p>
+<p class="font-label-bold text-primary mt-1">R$ 849,00</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Summary Card -->
+<aside class="sticky top-24 h-fit">
+<div class="bg-surface-container-lowest p-gutter rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<h2 class="font-headline-lg text-title-md mb-6">Resumo do Pedido</h2>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg">Subtotal (2 itens)</span>
+<span class="font-body-lg">R$ 1.448,90</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg">Frete</span>
+<span class="font-body-lg text-tertiary">Grátis</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body-lg">Descontos</span>
+<span class="font-body-lg text-error">- R$ 50,00</span>
+</div>
+<div class="border-t border-outline-variant/30 pt-3 flex justify-between items-center">
+<span class="font-headline-lg text-title-md">Total</span>
+<div class="text-right">
+<p class="font-display-lg text-price-display text-primary">R$ 1.398,90</p>
+<p class="text-body-sm text-on-surface-variant">ou 10x de R$ 139,89</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-bold text-body-lg hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                            Finalizar Compra
+                        </button>
+<div class="flex items-center gap-2 justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="font-body-sm text-body-sm">Compra Garantida Marketplace</span>
+</div>
+</div>
+<!-- Coupon Area -->
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<label class="block font-label-bold text-body-sm text-on-surface-variant mb-2">Cupom de Desconto</label>
+<div class="flex gap-2">
+<input class="flex-grow p-2 rounded-lg border border-outline-variant outline-none focus:border-primary text-body-sm uppercase" placeholder="Digite seu cupom" type="text"/>
+<button class="bg-surface-variant text-on-surface-variant px-4 py-2 rounded-lg font-label-bold text-body-sm hover:bg-outline-variant transition-colors">Aplicar</button>
+</div>
+</div>
+</div>
+<!-- Help Card -->
+<div class="mt-gutter p-gutter rounded-xl bg-secondary-container/30 border border-secondary-container flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">headset_mic</span>
+<div>
+<p class="font-label-bold text-label-bold text-on-secondary-container">Precisa de ajuda?</p>
+<p class="font-body-sm text-body-sm text-on-secondary-container/80">Fale com um consultor via Chat ou WhatsApp para tirar suas dúvidas.</p>
+<button class="mt-2 text-primary font-label-bold text-label-bold">Iniciar Atendimento</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Bottom Mobile Nav (Simulated as per constraints for relevant pages, though checkout often hides global nav, the prompt mentioned predicting components) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface dark:bg-on-background border-t border-outline-variant/30 py-base px-gutter flex justify-around items-center z-50 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px]">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-bold text-[10px]">Busca</span>
+</a>
+<div class="flex flex-col items-center justify-center text-primary bg-secondary-container/50 rounded-full px-4 py-1 transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-label-bold text-[10px]">Carrinho</span>
+</div>
+<a class="flex flex-col items-center justify-center text-on-secondary-container transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-[10px]">Perfil</span>
+</a>
+</nav>
+<!-- Simple Footer for Checkout -->
+<footer class="pb-32 pt-12 text-center text-on-surface-variant px-gutter">
+<div class="flex justify-center gap-6 mb-4">
+<span class="material-symbols-outlined text-4xl opacity-20">shield</span>
+<span class="material-symbols-outlined text-4xl opacity-20">encrypted</span>
+<span class="material-symbols-outlined text-4xl opacity-20">workspace_premium</span>
+</div>
+<p class="font-body-sm text-body-sm">© 2024 Marketplace Inc. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+</footer>
+</body></html>

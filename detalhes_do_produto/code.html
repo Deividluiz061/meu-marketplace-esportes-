@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalhes do Produto | Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "inverse-primary": "#b7c4ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "primary": "#003ec7",
+                    "tertiary-container": "#006e95",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "on-primary-fixed": "#001452",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#004ced",
+                    "on-primary-container": "#dfe3ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#caeaff",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-low": "#f2f4f6",
+                    "outline-variant": "#c3c5d9",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dde1ff",
+                    "tertiary-fixed": "#c4e7ff",
+                    "background": "#f7f9fb",
+                    "secondary": "#565e74",
+                    "on-surface": "#191c1e",
+                    "on-primary-fixed-variant": "#0038b6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "primary-container": "#0052ff",
+                    "tertiary": "#005474",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "price-display": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product-image-container {
+            aspect-ratio: 4/5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background shadow-sm fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-[24px] font-bold text-primary dark:text-inverse-primary">Marketplace</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-primary dark:text-inverse-primary relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-error text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Breadcrumbs -->
+<nav class="mb-gutter flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Início</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Eletrônicos</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Fone de Ouvido Premium Wireless</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left: Image Gallery -->
+<div class="md:col-span-7 grid grid-cols-12 gap-4">
+<div class="col-span-12 rounded-xl overflow-hidden shadow-sm bg-white product-image-container border border-outline-variant/20">
+<img alt="Premium Wireless Headphones" class="w-full h-full object-cover" data-alt="A professional product photography shot of sleek, matte black wireless over-ear headphones. The lighting is dramatic and clean, emphasizing the metallic textures and premium build quality. The background is a minimalist, light-grey gradient that makes the product pop. The overall aesthetic is corporate and modern, reflecting a high-end electronics brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKRBzq2LDbmwZPc0kbsHKe7scUDsGRGR6958NOtMoikw-Zd9_xHE2D0eNf7O9DmYzwiLYdbOY7ra9glbR619PToJW-gpwCcpEGIT7VZVS6MMyJUFHlu-JM1YM51gsITd70zA7Gb6nkI0ZB2KlgWXQROA4d2Vj_fc6cMATCezPuHyo87eWWeI_b8kPqRodl4w76bqxOlXm_oeB9eoK8pqdm3qynElWNK9JYUrTkEKh399_3TZhu6HxWLpzAv-BVHQzo7wn1hLNXpM"/>
+</div>
+<div class="col-span-3 aspect-square rounded-lg overflow-hidden border-2 border-primary bg-white cursor-pointer">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="Close-up detail of the cushioned ear cup of a premium headphone set, showcasing the soft leather texture and fine stitching. Soft, warm lighting highlights the luxury feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPao8lJ3auwadfOIPpmYmZFy26Ht_Ej9zyzn0tdnURU3mGkt6DhUPyxbqErByCqwXjtvcsyiRlxdhPB_vZybOjqCnLfdV-k22vhX7wEIGdR2mUYhWgnATZfNp0FDYTbYWQnhX06r4tZFctK4obH7QuLqSMCd5WhxE2A97q8a0luRnupVnQ4Z7Ey8OPLtPbOvrDb1sAUwUMvD_dVeNNhffBt3h7YWxkbM0IqqCdO40oTrsnKBJ3ZVHB7OSWBAis8rkfHw_U07xdiEg"/>
+</div>
+<div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white cursor-pointer">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="The adjustable metallic headband of a professional headphone set, reflecting bright studio light. The focus is sharp on the brushed metal surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD812U2qbNw2X2S8Xd6dmgu1mBEHTCLZKVdY3fPNwb7TkmJxAsN_bpbC05tZh8zJCI70_WFmtmrDYn2-A0XLvZPIIvh4i8JBoaHIl5TpLc__KKBTB_FwsQ9DPrwT4oti7LhKLIfMaO1XavVBvwAr37pzFfBNsPtNbDIySIM1x6X_fZWKF1IOgv_SWjDM95E_8MuhFFW4oT2kwLwNvwyFPzLtdvK7qKRqlmwl3YmQ89teXYxpOBB2QLvvxmsYmzVZt-KmOlkMmojXvg"/>
+</div>
+<div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white cursor-pointer">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="A stylish lifestyle shot of the headphones resting on a minimalist walnut wooden desk next to a sleek laptop. The scene is bright and airy with natural sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3qUClAsXUdx9OcfJCW4PGvfEFLzjOe2p8r4Reph_G0KI4Ih0HVuzgiAAT3guDWizmeS_Szphz_TOxX_wQR1IIIU8JIahoK48zZ4bVHMfFrFsSb2557bOr8MCqfJSGsUjejwfRIX48DrmKFEsyKdYWGyrGAJUXG0QZP5TvvSJLOK4BJlKk1myHuLSEfAeFJKQ6GYMx7LiB_pnfW2wb0-d80GrUxK7ifLLhlnGVidOO98rZSladNKfbahYk75mx49y9rYkFoZG_BuI"/>
+</div>
+<div class="col-span-3 aspect-square rounded-lg overflow-hidden border border-outline-variant/30 bg-white flex items-center justify-center bg-surface-variant/20">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Right: Details & Purchase -->
+<div class="md:col-span-5 flex flex-col gap-base">
+<div class="bg-primary-container/10 inline-flex items-center px-3 py-1 rounded-full w-fit mb-2">
+<span class="text-primary font-label-bold text-label-bold">Destaque da Semana</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight">Fone de Ouvido Premium Noise Cancelling Wireless v5.2</h2>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+<span class="ml-2 font-label-bold text-label-bold text-on-surface-variant">4.8 (124 avaliações)</span>
+</div>
+</div>
+<div class="my-gutter">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">R$ 1.299,00</span>
+<div class="font-price-display text-price-display text-primary flex items-baseline gap-2">
+<span>R$ 899,90</span>
+<span class="text-success font-label-bold text-label-bold text-green-600">30% OFF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 italic">ou 10x de R$ 89,99 sem juros</p>
+</div>
+<!-- Variants: Color -->
+<div class="flex flex-col gap-3 mb-6">
+<label class="font-label-bold text-label-bold text-on-surface">Cor</label>
+<div class="flex gap-4">
+<button aria-label="Black" class="w-10 h-10 rounded-full bg-[#191c1e] ring-2 ring-primary ring-offset-2 transition-transform active:scale-90"></button>
+<button aria-label="Grey" class="w-10 h-10 rounded-full bg-[#e0e3e5] border border-outline-variant/30 transition-transform active:scale-90"></button>
+<button aria-label="Blue" class="w-10 h-10 rounded-full bg-[#003ec7] border border-outline-variant/30 transition-transform active:scale-90"></button>
+</div>
+</div>
+<!-- Variants: Quantity -->
+<div class="flex flex-col gap-3 mb-gutter">
+<label class="font-label-bold text-label-bold text-on-surface">Quantidade</label>
+<div class="flex items-center border border-outline-variant/50 rounded-lg w-fit bg-white">
+<button class="p-3 hover:bg-surface-variant/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="px-6 font-title-md text-title-md">1</span>
+<button class="p-3 hover:bg-surface-variant/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary text-on-primary font-label-bold text-label-bold py-4 rounded-xl shadow-md transition-all active:scale-95 hover:bg-primary/90">
+                        Comprar Agora
+                    </button>
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold py-4 rounded-xl transition-all active:scale-95 hover:bg-secondary-container/80 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        Adicionar ao Carrinho
+                    </button>
+</div>
+<!-- Delivery Info -->
+<div class="mt-gutter p-4 rounded-xl bg-surface-container-low flex items-start gap-4 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div>
+<p class="font-label-bold text-label-bold">Frete Grátis para todo o Brasil</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Entrega estimada entre 3 a 5 dias úteis.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Description (Asymmetric Layout / Bento) -->
+<section class="mt-stack-lg border-t border-outline-variant/30 pt-stack-lg">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-gutter">Detalhes Técnicos</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10">
+<h4 class="font-title-md text-title-md text-primary mb-4">Experiência Sonora Imersiva</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Projetado para os audiófilos mais exigentes, este fone oferece uma resposta de frequência ultra-linear. Com drivers de 40mm revestidos de titânio, cada nota é reproduzida com clareza cristalina, desde os sub-graves profundos até as frequências altas mais sutis. O cancelamento de ruído ativo inteligente se adapta ao seu ambiente em tempo real, eliminando até 98% dos sons externos.
+                    </p>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-primary text-on-primary p-8 rounded-2xl shadow-sm flex flex-col justify-center">
+<span class="material-symbols-outlined text-[48px] mb-4">battery_charging_full</span>
+<h4 class="font-title-md text-title-md mb-2">Bateria de Longa Duração</h4>
+<p class="font-body-sm text-body-sm opacity-90">Aproveite até 45 horas de reprodução contínua com uma única carga. Carregamento rápido: 10 minutos = 5 horas de som.</p>
+</div>
+<!-- Bento Card 3 -->
+<div class="bg-surface-container-high p-8 rounded-2xl shadow-sm">
+<h4 class="font-title-md text-title-md text-on-surface mb-2">Conectividade v5.2</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Conexão Multi-ponto</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Baixa latência para games</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Alcance de até 20 metros</li>
+</ul>
+</div>
+<!-- Bento Card 4 -->
+<div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 flex gap-6 items-center">
+<div class="hidden md:block w-32 h-32 rounded-lg overflow-hidden shrink-0">
+<img alt="Comfort Tech" class="w-full h-full object-cover" data-alt="Detailed macro photo of the memory foam ear padding. The material looks soft and breathable, with a subtle textured pattern designed for long-term comfort and heat dissipation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSCyVTbTQOew90SaRQhjs6e8ho45AThxodymVdDzEIyXrsbZgeQCYoHbKFBpzHMyMhr1SjmSVAlsgo5WJ_ouetmZSltinEKwSrLQ4-hvUZRylKDnCorg0dKzKJTXIXx5l8y531H9c734VZITFuZu04T0y5hO2JAqpK4IhrqpptSf-cv-fC2yhrrEqu8RxaniO1ssOIwQiFdcKBIzXJDlMVq4l6Qhhyz3b1X5TX1N8VjNW-ILJsPAEUoT8aNiyhU6Zdojbq_rNgSc0"/>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface mb-2">Conforto Ergonômico</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Haste ajustável com espuma de memória de alta densidade e acabamento em tecido respirável que evita o aquecimento durante longas sessões de uso.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="mt-stack-lg">
+<div class="flex justify-between items-end mb-gutter">
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">Produtos Relacionados</h3>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-1 hover:underline" href="#">Ver tudo <span class="material-symbols-outlined">chevron_right</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Smartwatch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern smartwatch with a minimalist circular silver frame and a high-resolution glowing digital interface displaying fitness metrics. Set against a clean, soft-blue studio backdrop with elegant lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45qbUKh9Vi_cLOWRdKLwHspObQaEyu8L4pl82UukL9EK1ZOmcQrFwZPwB5dlEC7T5vxtzQZgi7DbfRC7PGY1WF2Wnp1MyjTC8qRC7_cE6serIqdZnnDNPSexA4kf7XjWdnmWx0AwYwjpGoZY43m-rr0f0TYThMYfuEcRr0_EH9wjCx8yb3MKs8rDNK1gFH6LXI7KwMDy90YoVdcxLnKpl7o6mNz42R03wVTFc3GWy-8eZMogZ-dQDVIu3QiPNFktBQ8DGdKHsRSw"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Smartwatch Pro Series 5 - Edição Esportiva</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 459,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Earbuds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Compact white wireless earbuds in their open charging case, highlighting the glossy finish and magnetic docking. The aesthetic is clean, bright, and high-tech, typical of a professional product catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzlUMrwmWTLYEDPktCP4ydQl1mll0qd355eGfwXG_16-VW3GdKL9ISZpxA4umy0RFQfNNNEd4zDMDugkJ1RUwYixmLPO3fB8iD-rOESCCJetlmBx31TOp3F-gBL-qqlzSZ8MrdrryGHhOcKgloGjnWivKIBInzPXBchULDX0oTtPGObYLBFi-SBQkJtZE3jmrSEeJ3rFHVmFNhsN8uB-u3l3sTN1l2kRefPecfjTyaN6GYM9fzL2zABQjY2ovGy0kRuJTBn3TpNRw"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Fone In-Ear True Wireless Compact</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 299,90</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Case" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A durable, hard-shell carrying case for headphones made of premium synthetic fabric in a dark charcoal grey. It features a high-quality zipper and a sleek, compact profile. Professional studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8tarD6AGGelu6VncYgE7W6BirW72dTStHqFn7TOBVH78t33P32bJD5bJjg3ZJvWL7zs98ap0mFWFFnZDFaeSzxgYwvZ0arwp6pd8-io62KK6NoZIgrkIWKc9MMLmiRCNjW14X0GxiDG5W835JxnU3L7IHDb0tCjcCmOvTIzsrZC1IsHW53_c6x3ald_OW7bCCEWysgTsErJEvkzIUxop7I8RoAJYPDuixL87Ze1IUS0Is4xNWDsf16jsHqs4RdcuF67iHgh3jNwE"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Case Rígido para Fones de Ouvido</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 89,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/10 flex flex-col group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Speaker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A portable Bluetooth speaker with a rugged, waterproof fabric wrap in deep blue. The design is modern and functional, shown in a clean environment with soft shadows and sharp focus on the control buttons." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Bcqqb_ddxNzJXDZH9Wl9TVnSA7AfoB4csl3J7wzuUDXapoU1DeTdB22o3qFtD8PcVC93RFTGMTBUgETQY0V8wN5bCkpexLBPXrG0YHW746xGWCkPG_eK6ifhO5tNiTqrK7X_kVrsQFQyrFAN9G0rqVUAl2FkeyRb4d9-oKZWSu7QNk3imu2Gu55l0syKs5vHbRvPCTzbMT8nLVxuHbwGQv7gDStqI-nxpGrIItPb-HPSQj4GS1ieg07NNNo9iDxQfwDPl8hK5TQ"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface line-clamp-2">Caixa de Som Bluetooth Waterproof</h5>
+<p class="font-price-display text-[18px] text-primary">R$ 389,00</p>
+<button class="mt-2 w-full py-2 bg-secondary-container text-on-secondary-container rounded-lg font-label-bold text-[12px] flex items-center justify-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Adicionar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-gutter bg-surface dark:bg-on-background border-t border-outline-variant/30 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Início</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-bold text-label-bold">Busca</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-bold text-label-bold">Favoritos</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary bg-secondary-container/50 dark:bg-on-secondary-fixed-variant rounded-full px-4 py-1 transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-bold text-label-bold">Carrinho</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant transition-transform duration-200 ease-in-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-label-bold">Perfil</span>
+</button>
+</nav>
+</body></html>
